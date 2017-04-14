@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="avatarImageView" destination="PWr-Zb-r3b" id="spH-ua-DWP"/>
+                <outlet property="descriptionLabel" destination="DSq-pP-MyE" id="7Na-YM-oDX"/>
+                <outlet property="nameLabel" destination="ZH0-yW-3cz" id="m5z-f6-RU7"/>
+                <outlet property="timeLabel" destination="pwb-BK-uwS" id="yAG-cD-xLW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWr-Zb-r3b">
+                    <rect key="frame" x="138" y="100" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Rvd-PU-K0H"/>
+                        <constraint firstAttribute="height" constant="100" id="abi-n2-Lpw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刀尺子文生白" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-yW-3cz" userLabel="nameLabel">
+                    <rect key="frame" x="136" y="216" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSq-pP-MyE" userLabel="descriptionLabel">
+                    <rect key="frame" x="167" y="292" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-BK-uwS" userLabel="timeLabel">
+                    <rect key="frame" x="167" y="349" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-2v-BOP">
+                    <rect key="frame" x="16" y="142" width="62" height="30"/>
+                    <state key="normal" title="修改名称"/>
+                    <connections>
+                        <action selector="touch1:" destination="-1" eventType="touchUpInside" id="Ys9-AR-Oj8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoP-6L-y9S">
+                    <rect key="frame" x="16" y="195" width="62" height="30"/>
+                    <state key="normal" title="修改消息"/>
+                    <connections>
+                        <action selector="touch2:" destination="-1" eventType="touchUpInside" id="YI5-xC-YOd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REq-Kv-AfZ">
+                    <rect key="frame" x="16" y="270" width="62" height="30"/>
+                    <state key="normal" title="异步修改"/>
+                    <connections>
+                        <action selector="touch3:" destination="-1" eventType="touchUpInside" id="iKb-rW-dAE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yoP-6L-y9S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="4N9-Um-o6o"/>
+                <constraint firstItem="ZH0-yW-3cz" firstAttribute="top" secondItem="PWr-Zb-r3b" secondAttribute="bottom" constant="16" id="6u6-mt-ARE"/>
+                <constraint firstItem="DSq-pP-MyE" firstAttribute="centerX" secondItem="PWr-Zb-r3b" secondAttribute="centerX" id="CGz-IY-UVI"/>
+                <constraint firstItem="ZH0-yW-3cz" firstAttribute="centerX" secondItem="PWr-Zb-r3b" secondAttribute="centerX" id="LrU-g7-veU"/>
+                <constraint firstItem="pwb-BK-uwS" firstAttribute="centerX" secondItem="DSq-pP-MyE" secondAttribute="centerX" id="MmR-re-Qjn"/>
+                <constraint firstItem="DSq-pP-MyE" firstAttribute="top" secondItem="ZH0-yW-3cz" secondAttribute="bottom" constant="55" id="QbN-FH-USh"/>
+                <constraint firstItem="ubh-2v-BOP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="RrC-WB-BYZ"/>
+                <constraint firstItem="yoP-6L-y9S" firstAttribute="top" secondItem="ubh-2v-BOP" secondAttribute="bottom" constant="23" id="WMP-pZ-XcU"/>
+                <constraint firstItem="PWr-Zb-r3b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a14-10-qUJ"/>
+                <constraint firstItem="REq-Kv-AfZ" firstAttribute="top" secondItem="yoP-6L-y9S" secondAttribute="bottom" constant="45" id="ows-lk-VSV"/>
+                <constraint firstItem="PWr-Zb-r3b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="smE-H9-t56"/>
+                <constraint firstItem="ubh-2v-BOP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="142" id="v96-0v-CFF"/>
+                <constraint firstItem="pwb-BK-uwS" firstAttribute="top" secondItem="DSq-pP-MyE" secondAttribute="bottom" constant="36" id="y4Q-8z-KlY"/>
+                <constraint firstItem="REq-Kv-AfZ" firstAttribute="leading" secondItem="yoP-6L-y9S" secondAttribute="leading" id="zXZ-50-Sfe"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
