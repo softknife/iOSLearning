@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='1-1常量与变量'/>
+        <page name='1-2Swift是强类型语言'/>
+        <page name='1-3数据类型'/>
+        <page name='1-4类型推导&amp;类型转换'/>
+        <page name='1-5逻辑分支if'/>
+        <page name='1-6逻辑分支guard'/>
+        <page name='1-7逻辑分支Switch'/>
+        <page name='1-8三目运算符'/>
+        <page name='1-9循环'/>
+        <page name='1-10区间'/>
+        <page name='1-11字符串使用'/>
+        <page name='1-12数组'/>
+        <page name='1-13字典'/>
+        <page name='1-14元组'/>
+        <page name='1-15可选类型与解包'/>
+        <page name='1-16特殊保留字'/>
+    </pages>
+</playground>

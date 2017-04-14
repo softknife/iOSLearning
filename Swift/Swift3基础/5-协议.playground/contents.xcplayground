@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='1-协议的基本使用'/>
+        <page name='2-协议在代理中的使用场景'/>
+        <page name='3-协议中可选方法的定义'/>
+        <page name='4-面向协议编程'/>
+        <page name='5-关联类型'/>
+    </pages>
+</playground>

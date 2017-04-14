@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='1-函数的基本写法'/>
+        <page name='2-参数'/>
+        <page name='3-函数的其他用法'/>
+        <page name='4-枚举的基本使用'/>
+        <page name='5-结构体'/>
+        <page name='6-类的基本使用'/>
+        <page name='7-类的属性'/>
+        <page name='8-类的构造函数'/>
+        <page name='9-类的析构函数'/>
+        <page name='10-swift3.1可失败的构造函数'/>
+    </pages>
+</playground>
