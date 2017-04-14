@@ -65,7 +65,7 @@ static NSString *const cellReuseId = @"cellReuseId";
      // default is YES
     search.hidesNavigationBarDuringPresentation = YES; // 是否隐藏导航条
     
-    search.searchBar.frame = CGRectMake(search.searchBar.frame.origin.x,search.searchBar.frame.origin.y,search.searchBar.frame.size.width,44.0);
+//    search.searchBar.frame = CGRectMake(search.searchBar.frame.origin.x,search.searchBar.frame.origin.y,search.searchBar.frame.size.width,44.0);
     
     search.delegate = self;
     search.searchBar.scopeButtonTitles = @[@"诗集",@"历史",@"动画片"];
@@ -74,6 +74,7 @@ static NSString *const cellReuseId = @"cellReuseId";
     
     self.tableView.tableHeaderView = self.searchController.searchBar;
     
+    [self.searchController.searchBar sizeToFit];
     /*
      Determines which parent view controller's view should be presented over for presentations of type
      UIModalPresentationCurrentContext.  If no ancestor view controller has this flag set, then the presenter
