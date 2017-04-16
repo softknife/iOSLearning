@@ -70,3 +70,5 @@ for (idx , elment) in array5.enumerated() {
 for element in array5[0..<2] {
     print(element)
 }
+
+

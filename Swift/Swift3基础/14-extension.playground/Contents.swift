@@ -30,3 +30,10 @@ extension Optional where Wrapped == String {
         return self?.isBlank ?? true
     }
 }
+
+var ccc:String?
+
+ccc.isBlank
+
+
+

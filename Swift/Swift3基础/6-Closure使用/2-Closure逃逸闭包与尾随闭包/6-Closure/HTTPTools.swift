@@ -12,7 +12,7 @@ class HTTPTools: NSObject {
 
     
     // 闭包作为参数, 闭包类型:有参数String,无返回值Void
-    // @convention(block) 可以自动生成尾随闭包❤️
+    // @convention(block) 可以自动生成尾随闭包❤️ Trailing closures
     // () 等价于 Void 等价于 Swift.Void
     
     // swift3.0后,默认闭包是非逃逸,这样效率更高,同时不保持self,如果闭包在异步中执行,需要收到加上逃逸

@@ -88,6 +88,24 @@ func sum3(nums:Int...,num1:Int) -> Int{
 sum3(nums: 1,2,3,4, num1: 5)
 
 
+/**
+ # 简写参数名
+ - $x
+ 如果一个闭包有一个或多个参数，Swift 允许我们给它们定义变量名
+ */
 
+func say(_ message: String, completion: (_ goodbye: String) -> Void) {
+    print(message)
+    completion("Goodbye")
+}
+
+    
+
+say("Hi") { (goodbye: String) -> Void in
+        print(goodbye)
+}
+
+// 其实上面闭包中参数没有存在的必要
+say("Hi") { print($0) }
 
 

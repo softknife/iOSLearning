@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='1-1常量与变量'/>
         <page name='1-2Swift是强类型语言'/>
@@ -16,6 +16,7 @@
         <page name='1-13字典'/>
         <page name='1-14元组'/>
         <page name='1-15可选类型与解包'/>
-        <page name='1-16特殊保留字'/>
+        <page name='1-16TypeAlias'/>
+        <page name='1-17@autoclosure'/>
     </pages>
 </playground>
