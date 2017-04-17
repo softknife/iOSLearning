@@ -3,7 +3,7 @@
 import UIKit
 
 // 创建代理协议
-protocol BabyNancyProtocol {
+protocol BabyNancyProtocol:class { // 此处class表示只能用来被类对象遵守
     func feedFood(someOne :Any)
     func accompany(someOne :Any)
 }
@@ -14,7 +14,7 @@ class Baby {
 
     /** 名字*/
     var name = ""
-    var delegate : BabyNancyProtocol?
+    weak var delegate : BabyNancyProtocol?
     
     fileprivate func eat(food:String?) {
     
