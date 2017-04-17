@@ -28,6 +28,8 @@
     NSString *doc = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
     NSString *dbPath = [doc stringByAppendingPathComponent:@"yaptest111.sqlite"];
     
+    
+    
     [HQDBHelper shareDBHelperWithPath:dbPath];
 
     
