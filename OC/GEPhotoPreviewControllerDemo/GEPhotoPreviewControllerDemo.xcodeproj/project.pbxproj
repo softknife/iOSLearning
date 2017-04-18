@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AD8EA351EA5CBCD000F6915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA341EA5CBCD000F6915 /* main.m */; };
+		1AD8EA381EA5CBCD000F6915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA371EA5CBCD000F6915 /* AppDelegate.m */; };
+		1AD8EA3B1EA5CBCD000F6915 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA3A1EA5CBCD000F6915 /* ViewController.m */; };
+		1AD8EA3E1EA5CBCD000F6915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA3C1EA5CBCD000F6915 /* Main.storyboard */; };
+		1AD8EA401EA5CBCD000F6915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA3F1EA5CBCD000F6915 /* Assets.xcassets */; };
+		1AD8EA431EA5CBCD000F6915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA411EA5CBCD000F6915 /* LaunchScreen.storyboard */; };
+		1AD8EA751EA5CC7E000F6915 /* GEIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA661EA5CC7E000F6915 /* GEIndexPath.m */; };
+		1AD8EA761EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA681EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m */; };
+		1AD8EA771EA5CC7E000F6915 /* GEPhotoBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6A1EA5CC7E000F6915 /* GEPhotoBrowserCell.m */; };
+		1AD8EA781EA5CC7E000F6915 /* GEPhotoBrowserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6B1EA5CC7E000F6915 /* GEPhotoBrowserCell.xib */; };
+		1AD8EA791EA5CC7E000F6915 /* GEPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6D1EA5CC7E000F6915 /* GEPhotoBrowserController.m */; };
+		1AD8EA7A1EA5CC7E000F6915 /* GEPhotoBrowserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6E1EA5CC7E000F6915 /* GEPhotoBrowserController.xib */; };
+		1AD8EA7B1EA5CC7E000F6915 /* GEPhotoBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA701EA5CC7E000F6915 /* GEPhotoBrowserLayout.m */; };
+		1AD8EA7C1EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA721EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m */; };
+		1AD8EA7D1EA5CC7E000F6915 /* GEPhotoBrowserTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA741EA5CC7E000F6915 /* GEPhotoBrowserTransition.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AD8EA301EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEPhotoPreviewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD8EA341EA5CBCD000F6915 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AD8EA361EA5CBCD000F6915 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1AD8EA371EA5CBCD000F6915 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AD8EA391EA5CBCD000F6915 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1AD8EA3A1EA5CBCD000F6915 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1AD8EA3D1EA5CBCD000F6915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AD8EA3F1EA5CBCD000F6915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AD8EA421EA5CBCD000F6915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1AD8EA441EA5CBCD000F6915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD8EA651EA5CC7E000F6915 /* GEIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEIndexPath.h; sourceTree = "<group>"; };
+		1AD8EA661EA5CC7E000F6915 /* GEIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEIndexPath.m; sourceTree = "<group>"; };
+		1AD8EA671EA5CC7E000F6915 /* GEPhotoBrowserAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserAnimation.h; sourceTree = "<group>"; };
+		1AD8EA681EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserAnimation.m; sourceTree = "<group>"; };
+		1AD8EA691EA5CC7E000F6915 /* GEPhotoBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserCell.h; sourceTree = "<group>"; };
+		1AD8EA6A1EA5CC7E000F6915 /* GEPhotoBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserCell.m; sourceTree = "<group>"; };
+		1AD8EA6B1EA5CC7E000F6915 /* GEPhotoBrowserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEPhotoBrowserCell.xib; sourceTree = "<group>"; };
+		1AD8EA6C1EA5CC7E000F6915 /* GEPhotoBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserController.h; sourceTree = "<group>"; };
+		1AD8EA6D1EA5CC7E000F6915 /* GEPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserController.m; sourceTree = "<group>"; };
+		1AD8EA6E1EA5CC7E000F6915 /* GEPhotoBrowserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEPhotoBrowserController.xib; sourceTree = "<group>"; };
+		1AD8EA6F1EA5CC7E000F6915 /* GEPhotoBrowserLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserLayout.h; sourceTree = "<group>"; };
+		1AD8EA701EA5CC7E000F6915 /* GEPhotoBrowserLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserLayout.m; sourceTree = "<group>"; };
+		1AD8EA711EA5CC7E000F6915 /* GEPhotoBrowserPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserPresentation.h; sourceTree = "<group>"; };
+		1AD8EA721EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserPresentation.m; sourceTree = "<group>"; };
+		1AD8EA731EA5CC7E000F6915 /* GEPhotoBrowserTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserTransition.h; sourceTree = "<group>"; };
+		1AD8EA741EA5CC7E000F6915 /* GEPhotoBrowserTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserTransition.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AD8EA2D1EA5CBCD000F6915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AD8EA271EA5CBCD000F6915 = {
+			isa = PBXGroup;
+			children = (
+				1AD8EA641EA5CC7E000F6915 /* GEPhotoPreviewController */,
+				1AD8EA321EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo */,
+				1AD8EA311EA5CBCD000F6915 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AD8EA311EA5CBCD000F6915 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8EA301EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AD8EA321EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8EA361EA5CBCD000F6915 /* AppDelegate.h */,
+				1AD8EA371EA5CBCD000F6915 /* AppDelegate.m */,
+				1AD8EA391EA5CBCD000F6915 /* ViewController.h */,
+				1AD8EA3A1EA5CBCD000F6915 /* ViewController.m */,
+				1AD8EA3C1EA5CBCD000F6915 /* Main.storyboard */,
+				1AD8EA3F1EA5CBCD000F6915 /* Assets.xcassets */,
+				1AD8EA411EA5CBCD000F6915 /* LaunchScreen.storyboard */,
+				1AD8EA441EA5CBCD000F6915 /* Info.plist */,
+				1AD8EA331EA5CBCD000F6915 /* Supporting Files */,
+			);
+			path = GEPhotoPreviewControllerDemo;
+			sourceTree = "<group>";
+		};
+		1AD8EA331EA5CBCD000F6915 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8EA341EA5CBCD000F6915 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AD8EA641EA5CC7E000F6915 /* GEPhotoPreviewController */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8EA651EA5CC7E000F6915 /* GEIndexPath.h */,
+				1AD8EA661EA5CC7E000F6915 /* GEIndexPath.m */,
+				1AD8EA671EA5CC7E000F6915 /* GEPhotoBrowserAnimation.h */,
+				1AD8EA681EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m */,
+				1AD8EA691EA5CC7E000F6915 /* GEPhotoBrowserCell.h */,
+				1AD8EA6A1EA5CC7E000F6915 /* GEPhotoBrowserCell.m */,
+				1AD8EA6B1EA5CC7E000F6915 /* GEPhotoBrowserCell.xib */,
+				1AD8EA6C1EA5CC7E000F6915 /* GEPhotoBrowserController.h */,
+				1AD8EA6D1EA5CC7E000F6915 /* GEPhotoBrowserController.m */,
+				1AD8EA6E1EA5CC7E000F6915 /* GEPhotoBrowserController.xib */,
+				1AD8EA6F1EA5CC7E000F6915 /* GEPhotoBrowserLayout.h */,
+				1AD8EA701EA5CC7E000F6915 /* GEPhotoBrowserLayout.m */,
+				1AD8EA711EA5CC7E000F6915 /* GEPhotoBrowserPresentation.h */,
+				1AD8EA721EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m */,
+				1AD8EA731EA5CC7E000F6915 /* GEPhotoBrowserTransition.h */,
+				1AD8EA741EA5CC7E000F6915 /* GEPhotoBrowserTransition.m */,
+			);
+			path = GEPhotoPreviewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AD8EA2F1EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD8EA471EA5CBCD000F6915 /* Build configuration list for PBXNativeTarget "GEPhotoPreviewControllerDemo" */;
+			buildPhases = (
+				1AD8EA2C1EA5CBCD000F6915 /* Sources */,
+				1AD8EA2D1EA5CBCD000F6915 /* Frameworks */,
+				1AD8EA2E1EA5CBCD000F6915 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEPhotoPreviewControllerDemo;
+			productName = GEPhotoPreviewControllerDemo;
+			productReference = 1AD8EA301EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AD8EA281EA5CBCD000F6915 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = eric;
+				TargetAttributes = {
+					1AD8EA2F1EA5CBCD000F6915 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 76364BYDWJ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1AD8EA2B1EA5CBCD000F6915 /* Build configuration list for PBXProject "GEPhotoPreviewControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AD8EA271EA5CBCD000F6915;
+			productRefGroup = 1AD8EA311EA5CBCD000F6915 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AD8EA2F1EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AD8EA2E1EA5CBCD000F6915 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD8EA7A1EA5CC7E000F6915 /* GEPhotoBrowserController.xib in Resources */,
+				1AD8EA431EA5CBCD000F6915 /* LaunchScreen.storyboard in Resources */,
+				1AD8EA401EA5CBCD000F6915 /* Assets.xcassets in Resources */,
+				1AD8EA781EA5CC7E000F6915 /* GEPhotoBrowserCell.xib in Resources */,
+				1AD8EA3E1EA5CBCD000F6915 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AD8EA2C1EA5CBCD000F6915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD8EA771EA5CC7E000F6915 /* GEPhotoBrowserCell.m in Sources */,
+				1AD8EA761EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m in Sources */,
+				1AD8EA3B1EA5CBCD000F6915 /* ViewController.m in Sources */,
+				1AD8EA381EA5CBCD000F6915 /* AppDelegate.m in Sources */,
+				1AD8EA751EA5CC7E000F6915 /* GEIndexPath.m in Sources */,
+				1AD8EA7D1EA5CC7E000F6915 /* GEPhotoBrowserTransition.m in Sources */,
+				1AD8EA351EA5CBCD000F6915 /* main.m in Sources */,
+				1AD8EA7C1EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m in Sources */,
+				1AD8EA7B1EA5CC7E000F6915 /* GEPhotoBrowserLayout.m in Sources */,
+				1AD8EA791EA5CC7E000F6915 /* GEPhotoBrowserController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AD8EA3C1EA5CBCD000F6915 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD8EA3D1EA5CBCD000F6915 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1AD8EA411EA5CBCD000F6915 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD8EA421EA5CBCD000F6915 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AD8EA451EA5CBCD000F6915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AD8EA461EA5CBCD000F6915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AD8EA481EA5CBCD000F6915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 76364BYDWJ;
+				INFOPLIST_FILE = GEPhotoPreviewControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gloria.GEPhotoPreviewControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1AD8EA491EA5CBCD000F6915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 76364BYDWJ;
+				INFOPLIST_FILE = GEPhotoPreviewControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gloria.GEPhotoPreviewControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AD8EA2B1EA5CBCD000F6915 /* Build configuration list for PBXProject "GEPhotoPreviewControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD8EA451EA5CBCD000F6915 /* Debug */,
+				1AD8EA461EA5CBCD000F6915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD8EA471EA5CBCD000F6915 /* Build configuration list for PBXNativeTarget "GEPhotoPreviewControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD8EA481EA5CBCD000F6915 /* Debug */,
+				1AD8EA491EA5CBCD000F6915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AD8EA281EA5CBCD000F6915 /* Project object */;
+}
