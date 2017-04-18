@@ -119,7 +119,7 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
             case GEPreviewInnerObjectTypeNet:
             {
                 __weak typeof(self) weakSelf = self;
-                [self.imageView ge_setOrignalImageViewWithThumbURLString:photoObject.thumbnailUrl orignalUrlString:photoObject.orignalUrl completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                [self.imageView ge_setOrignalImageViewWithThumbURLString:photoObject.thumbnailUrl orignalUrlString:photoObject.orignalUrl placeholder:photoObject.praceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                     
                     weakSelf.imageView.contentMode = UIViewContentModeScaleAspectFit;
                     

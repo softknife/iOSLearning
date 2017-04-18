@@ -82,9 +82,10 @@ NSString *const GEImageDefaultUserPlaceholder = @"yx_ss_user_avatar";
 #pragma mark - Orignal Picture
 
 
-/**   随笔/班级圈附件/个人头像   原始图  回调  */
+/**  原始图  回调  */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
                                 orignalUrlString:(NSString *)orignalUrlString
+                                     placeholder:(NSString *)placeholder
                                        completed:(SDExternalCompletionBlock)completedBlock
 {
     
@@ -97,7 +98,7 @@ NSString *const GEImageDefaultUserPlaceholder = @"yx_ss_user_avatar";
             
         }else{
             
-            placeholderImg = [UIImage imageNamed:GEImageDefaultAttachPlaceholder];
+            placeholderImg = [UIImage imageNamed:placeholder];
         }
         
         [self sd_setShowActivityIndicatorView:YES];
@@ -121,9 +122,10 @@ NSString *const GEImageDefaultUserPlaceholder = @"yx_ss_user_avatar";
 
 }
 
-/**   随笔/班级圈附件/个人头像   原始图  回调  进度条 */
+/**  原始图  回调  进度条 */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
                                 orignalUrlString:(NSString *)orignalUrlString
+                                     placeholder:(NSString *)placeholder
                                     progressType:(GEImageViewProgressValueType)type
                                         progress:(SDWebImageDownloaderProgressBlock)progressBlock
                                        completed:(SDExternalCompletionBlock)completedBlock
@@ -137,7 +139,7 @@ NSString *const GEImageDefaultUserPlaceholder = @"yx_ss_user_avatar";
             placeholderImg = [UIImage ge_getSDCacheDiskImageByUrlString:thumbUrlString];
             
         }else{
-            placeholderImg = [UIImage imageNamed:GEImageDefaultAttachPlaceholder];
+            placeholderImg = [UIImage imageNamed:placeholder];
         }
         
         [self sd_setShowActivityIndicatorView:YES];

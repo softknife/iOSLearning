@@ -39,14 +39,16 @@ UIKIT_EXTERN NSString *const GEImageDefaultUserPlaceholder;
 #pragma mark - 大图预览
 
 
-/**   随笔/班级圈附件/个人头像   原始图  回调 */
+/**   大图 回调 */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
                                 orignalUrlString:(NSString *)orignalUrlString
+                                     placeholder:(NSString *)placeholder
                                        completed:(SDExternalCompletionBlock)completedBlock;
 
-/**   随笔/班级圈附件/个人头像   原始图  回调  进度条 */
+/** 大图  回调  进度条 */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
                                 orignalUrlString:(NSString *)orignalUrlString
+                                     placeholder:(NSString *)placeholder
                                     progressType:(GEImageViewProgressValueType)type
                                         progress:(SDWebImageDownloaderProgressBlock)progressBlock
                                        completed:(SDExternalCompletionBlock)completedBlock;
