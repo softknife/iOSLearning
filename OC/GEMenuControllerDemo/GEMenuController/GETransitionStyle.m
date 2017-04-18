@@ -51,11 +51,20 @@
  */
 + (instancetype)styleWithRect:(CGRect)frame transitionDuration:(NSTimeInterval)duration
 {
-    GETransitionStyle *style = [self new];
-    style->_frame = frame;
-    style->_transitionDuration = duration;
-    
+    GETransitionStyle *style = [[self alloc] __initWithRect:frame transitionDuration:duration];
+
     return style;
     
+}
+
+- (instancetype)__initWithRect:(CGRect)frame transitionDuration:(NSTimeInterval)duration
+{
+    if (self = [super  init]) {
+        _frame = frame;
+        _transitionDuration = duration;
+        self.needMaskView = YES;
+    }
+    
+    return self;
 }
 @end

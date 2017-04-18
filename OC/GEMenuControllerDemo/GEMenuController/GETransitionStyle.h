@@ -34,6 +34,8 @@ typedef void(^GETransitionBlock)(UIView *,id <UIViewControllerContextTransitioni
 /** hideStatusBar时是否需要动画*/
 @property (nonatomic , assign,readonly) UIStatusBarAnimation animation;
 
+/** 是否需要maskview*/
+@property (nonatomic , assign ,getter=isNeedMaskView) BOOL needMaskView;
 
 /**
  当发生modal时，是否隐藏statusbar
@@ -50,6 +52,8 @@ typedef void(^GETransitionBlock)(UIView *,id <UIViewControllerContextTransitioni
  @return 实例
  */
 + (instancetype)styleWithRect:(CGRect)frame transitionDuration:(NSTimeInterval)duration;
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
 @end
 
 NS_ASSUME_NONNULL_END

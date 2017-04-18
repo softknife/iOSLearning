@@ -17,6 +17,11 @@
 {
     [super presentationTransitionWillBegin];
     
+    if (self.transition.transitionStyle.isNeedMaskView == NO ) {
+        return;
+    }
+    
+    
     UIView *containerView = self.containerView;
     
     UIButton *maskButton = [UIButton buttonWithType:UIButtonTypeCustom];
