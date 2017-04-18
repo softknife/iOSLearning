@@ -10,14 +10,25 @@
 #import "GEMenuAnimation.h"
 
 
+@protocol GEMenuTransitionDelegate <NSObject>
+
+@optional
+- (void)menuTransitionDidMaskViewAdd:(UIView *)maskView;
+- (void)menuTransitionDidMaskViewWillClick:(UIView *)maskView;
+- (void)menuTransitionDidMaskViewDidClick:(UIView *)maskView;
+@end
 
 @interface GEMenuTransition : NSObject<UIViewControllerTransitioningDelegate>
 
-+ (instancetype)shareTransition;
++ (instancetype)transition;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 /** transition*/
 @property (nonatomic , strong) GETransitionStyle *transitionStyle;
+
+/** 代理*/
+@property (nonatomic , weak) id<GEMenuTransitionDelegate> delegate;
+
 @end

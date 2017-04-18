@@ -10,13 +10,13 @@
 #import "GEMenuAnimation.h"
 #import "GEMenuPresentationController.h"
 
-@interface GEMenuTransition ()
+@interface GEMenuTransition ()<GEMenuPresentationControllerDelegate>
 /** animationTranstion*/
 @property (nonatomic , strong) GEMenuAnimation *animation;
 @end
 @implementation GEMenuTransition
 
-+ (instancetype)shareTransition
++ (instancetype)transition
 {
     return [[self alloc] __init__];
 }
@@ -40,6 +40,7 @@
 {
     GEMenuPresentationController *presentation = [[GEMenuPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
     presentation.transition = self; // 保持transition
+    presentation.transitionDelegate = self;
     
     return presentation;
 }
@@ -61,4 +62,26 @@
     return self.animation;
     
 }
+
+#pragma mark - GEMenuPresentationControllerDelegate
+- (void)menuPresentationControllerDidMaskViewAdd:(UIView *)maskView
+{
+    if ([self.delegate respondsToSelector:@selector(menuTransitionDidMaskViewAdd:)]) {
+        [self.delegate menuTransitionDidMaskViewAdd:maskView];
+    }
+}
+
+- (void)menuPresentationControllerDidMaskViewWillClick:(UIView *)maskView
+{
+    if ([self.delegate respondsToSelector:@selector(menuTransitionDidMaskViewWillClick:)]) {
+        [self.delegate menuTransitionDidMaskViewWillClick:maskView];
+    }
+}
+- (void)menuPresentationControllerDidMaskViewDidClick:(UIView *)maskView
+{
+    if ([self.delegate respondsToSelector:@selector(menuTransitionDidMaskViewDidClick:)]) {
+        [self.delegate menuTransitionDidMaskViewDidClick:maskView];
+    }
+}
+
 @end

@@ -30,7 +30,7 @@
 {
     CGRect bounds = [UIScreen mainScreen].bounds;
 
-    GEMenuTransition *transition = [GEMenuTransition shareTransition];
+    GEMenuTransition *transition = [GEMenuTransition transition];
     
     CGFloat width = 200;
     CGFloat height = 300;

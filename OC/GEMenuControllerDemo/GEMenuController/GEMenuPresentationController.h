@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+@protocol GEMenuPresentationControllerDelegate <NSObject>
+
+- (void)menuPresentationControllerDidMaskViewAdd:(UIView *)maskView;
+- (void)menuPresentationControllerDidMaskViewWillClick:(UIView *)maskView;
+- (void)menuPresentationControllerDidMaskViewDidClick:(UIView *)maskView;
+@end
+
 @class GEMenuTransition;
 @interface GEMenuPresentationController : UIPresentationController
 /** transition*/
 @property (nonatomic , strong) GEMenuTransition *transition;
+
+/** 代理*/
+@property (nonatomic , weak) id<GEMenuPresentationControllerDelegate> transitionDelegate;
 @end

@@ -26,7 +26,10 @@
 
     [containerView insertSubview:maskButton belowSubview:self.presentedView];
     
-    [maskButton addTarget:self action:@selector(maskButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [maskButton addTarget:self action:@selector(maskButtonTouch:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.transitionDelegate menuPresentationControllerDidMaskViewAdd:maskButton];
+    
 }
 
 - (void)presentationTransitionDidEnd:(BOOL)completed
@@ -54,8 +57,13 @@
     }
 }
 
-- (void)maskButtonTouch
+- (void)maskButtonTouch:(UIButton *)button
 {
-    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.transitionDelegate menuPresentationControllerDidMaskViewWillClick:button];
+    
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:^{
+        
+        [self.transitionDelegate menuPresentationControllerDidMaskViewDidClick:button];
+    }];
 }
 @end
