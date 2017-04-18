@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A51ECFA1EA4CCB2008FF18F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ECF91EA4CCB2008FF18F /* main.m */; };
+		1A51ECFD1EA4CCB2008FF18F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ECFC1EA4CCB2008FF18F /* AppDelegate.m */; };
+		1A51ED001EA4CCB2008FF18F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ECFF1EA4CCB2008FF18F /* ViewController.m */; };
+		1A51ED031EA4CCB2008FF18F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A51ED011EA4CCB2008FF18F /* Main.storyboard */; };
+		1A51ED051EA4CCB2008FF18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A51ED041EA4CCB2008FF18F /* Assets.xcassets */; };
+		1A51ED081EA4CCB2008FF18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A51ED061EA4CCB2008FF18F /* LaunchScreen.storyboard */; };
+		1A51ED191EA4CCD2008FF18F /* GEMenuAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ED111EA4CCD2008FF18F /* GEMenuAnimation.m */; };
+		1A51ED1A1EA4CCD2008FF18F /* GEMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ED131EA4CCD2008FF18F /* GEMenuController.m */; };
+		1A51ED1B1EA4CCD2008FF18F /* GEMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A51ED141EA4CCD2008FF18F /* GEMenuController.xib */; };
+		1A51ED1C1EA4CCD2008FF18F /* GEMenuPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ED161EA4CCD2008FF18F /* GEMenuPresentationController.m */; };
+		1A51ED1D1EA4CCD2008FF18F /* GEMenuTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51ED181EA4CCD2008FF18F /* GEMenuTransition.m */; };
+		1AD8EA261EA5AE31000F6915 /* GETransitionStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA251EA5AE31000F6915 /* GETransitionStyle.m */; };
+		78734C35B25ED4A4B08FD99E /* libPods-GEMenuControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8E7DA881126CA26538DE7D /* libPods-GEMenuControllerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A51ECF51EA4CCB2008FF18F /* GEMenuControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEMenuControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A51ECF91EA4CCB2008FF18F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A51ECFB1EA4CCB2008FF18F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A51ECFC1EA4CCB2008FF18F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1A51ECFE1EA4CCB2008FF18F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1A51ECFF1EA4CCB2008FF18F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A51ED021EA4CCB2008FF18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A51ED041EA4CCB2008FF18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A51ED071EA4CCB2008FF18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A51ED091EA4CCB2008FF18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A51ED101EA4CCD2008FF18F /* GEMenuAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMenuAnimation.h; sourceTree = "<group>"; };
+		1A51ED111EA4CCD2008FF18F /* GEMenuAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuAnimation.m; sourceTree = "<group>"; };
+		1A51ED121EA4CCD2008FF18F /* GEMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMenuController.h; sourceTree = "<group>"; };
+		1A51ED131EA4CCD2008FF18F /* GEMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuController.m; sourceTree = "<group>"; };
+		1A51ED141EA4CCD2008FF18F /* GEMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEMenuController.xib; sourceTree = "<group>"; };
+		1A51ED151EA4CCD2008FF18F /* GEMenuPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMenuPresentationController.h; sourceTree = "<group>"; };
+		1A51ED161EA4CCD2008FF18F /* GEMenuPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuPresentationController.m; sourceTree = "<group>"; };
+		1A51ED171EA4CCD2008FF18F /* GEMenuTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMenuTransition.h; sourceTree = "<group>"; };
+		1A51ED181EA4CCD2008FF18F /* GEMenuTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuTransition.m; sourceTree = "<group>"; };
+		1AD8EA241EA5AE31000F6915 /* GETransitionStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GETransitionStyle.h; sourceTree = "<group>"; };
+		1AD8EA251EA5AE31000F6915 /* GETransitionStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GETransitionStyle.m; sourceTree = "<group>"; };
+		1B8E7DA881126CA26538DE7D /* libPods-GEMenuControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GEMenuControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33DCE5E0298E0F5BC773063F /* Pods-GEMenuControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEMenuControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEMenuControllerDemo/Pods-GEMenuControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		983B539BDC51EFE845561628 /* Pods-GEMenuControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEMenuControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GEMenuControllerDemo/Pods-GEMenuControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A51ECF21EA4CCB2008FF18F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78734C35B25ED4A4B08FD99E /* libPods-GEMenuControllerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A51ECEC1EA4CCB2008FF18F = {
+			isa = PBXGroup;
+			children = (
+				1A51ED0F1EA4CCD1008FF18F /* GEMenuController */,
+				1A51ECF71EA4CCB2008FF18F /* GEMenuControllerDemo */,
+				1A51ECF61EA4CCB2008FF18F /* Products */,
+				5942CEFABE33A3CFEE954CA1 /* Pods */,
+				7B229F4671C45F16C49428A2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A51ECF61EA4CCB2008FF18F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A51ECF51EA4CCB2008FF18F /* GEMenuControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A51ECF71EA4CCB2008FF18F /* GEMenuControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1A51ECFB1EA4CCB2008FF18F /* AppDelegate.h */,
+				1A51ECFC1EA4CCB2008FF18F /* AppDelegate.m */,
+				1A51ECFE1EA4CCB2008FF18F /* ViewController.h */,
+				1A51ECFF1EA4CCB2008FF18F /* ViewController.m */,
+				1A51ED011EA4CCB2008FF18F /* Main.storyboard */,
+				1A51ED041EA4CCB2008FF18F /* Assets.xcassets */,
+				1A51ED061EA4CCB2008FF18F /* LaunchScreen.storyboard */,
+				1A51ED091EA4CCB2008FF18F /* Info.plist */,
+				1A51ECF81EA4CCB2008FF18F /* Supporting Files */,
+			);
+			path = GEMenuControllerDemo;
+			sourceTree = "<group>";
+		};
+		1A51ECF81EA4CCB2008FF18F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A51ECF91EA4CCB2008FF18F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A51ED0F1EA4CCD1008FF18F /* GEMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				1A51ED121EA4CCD2008FF18F /* GEMenuController.h */,
+				1A51ED131EA4CCD2008FF18F /* GEMenuController.m */,
+				1A51ED141EA4CCD2008FF18F /* GEMenuController.xib */,
+				1A51ED101EA4CCD2008FF18F /* GEMenuAnimation.h */,
+				1A51ED111EA4CCD2008FF18F /* GEMenuAnimation.m */,
+				1A51ED151EA4CCD2008FF18F /* GEMenuPresentationController.h */,
+				1A51ED161EA4CCD2008FF18F /* GEMenuPresentationController.m */,
+				1A51ED171EA4CCD2008FF18F /* GEMenuTransition.h */,
+				1A51ED181EA4CCD2008FF18F /* GEMenuTransition.m */,
+				1AD8EA241EA5AE31000F6915 /* GETransitionStyle.h */,
+				1AD8EA251EA5AE31000F6915 /* GETransitionStyle.m */,
+			);
+			path = GEMenuController;
+			sourceTree = "<group>";
+		};
+		5942CEFABE33A3CFEE954CA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				983B539BDC51EFE845561628 /* Pods-GEMenuControllerDemo.debug.xcconfig */,
+				33DCE5E0298E0F5BC773063F /* Pods-GEMenuControllerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7B229F4671C45F16C49428A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B8E7DA881126CA26538DE7D /* libPods-GEMenuControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A51ECF41EA4CCB2008FF18F /* GEMenuControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A51ED0C1EA4CCB2008FF18F /* Build configuration list for PBXNativeTarget "GEMenuControllerDemo" */;
+			buildPhases = (
+				B9DB1C8E437E67B1FA4B3A73 /* [CP] Check Pods Manifest.lock */,
+				1A51ECF11EA4CCB2008FF18F /* Sources */,
+				1A51ECF21EA4CCB2008FF18F /* Frameworks */,
+				1A51ECF31EA4CCB2008FF18F /* Resources */,
+				E368CBF000C3C8DC8066A520 /* [CP] Embed Pods Frameworks */,
+				C35547BF549FF6FC5078F28B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEMenuControllerDemo;
+			productName = GEMenuControllerDemo;
+			productReference = 1A51ECF51EA4CCB2008FF18F /* GEMenuControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A51ECED1EA4CCB2008FF18F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = eric;
+				TargetAttributes = {
+					1A51ECF41EA4CCB2008FF18F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3896W3N2Y4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1A51ECF01EA4CCB2008FF18F /* Build configuration list for PBXProject "GEMenuControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A51ECEC1EA4CCB2008FF18F;
+			productRefGroup = 1A51ECF61EA4CCB2008FF18F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A51ECF41EA4CCB2008FF18F /* GEMenuControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A51ECF31EA4CCB2008FF18F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A51ED081EA4CCB2008FF18F /* LaunchScreen.storyboard in Resources */,
+				1A51ED051EA4CCB2008FF18F /* Assets.xcassets in Resources */,
+				1A51ED031EA4CCB2008FF18F /* Main.storyboard in Resources */,
+				1A51ED1B1EA4CCD2008FF18F /* GEMenuController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9DB1C8E437E67B1FA4B3A73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C35547BF549FF6FC5078F28B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GEMenuControllerDemo/Pods-GEMenuControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E368CBF000C3C8DC8066A520 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GEMenuControllerDemo/Pods-GEMenuControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A51ECF11EA4CCB2008FF18F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A51ED001EA4CCB2008FF18F /* ViewController.m in Sources */,
+				1A51ED1C1EA4CCD2008FF18F /* GEMenuPresentationController.m in Sources */,
+				1A51ECFD1EA4CCB2008FF18F /* AppDelegate.m in Sources */,
+				1A51ED1D1EA4CCD2008FF18F /* GEMenuTransition.m in Sources */,
+				1A51ED191EA4CCD2008FF18F /* GEMenuAnimation.m in Sources */,
+				1A51ED1A1EA4CCD2008FF18F /* GEMenuController.m in Sources */,
+				1AD8EA261EA5AE31000F6915 /* GETransitionStyle.m in Sources */,
+				1A51ECFA1EA4CCB2008FF18F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A51ED011EA4CCB2008FF18F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A51ED021EA4CCB2008FF18F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A51ED061EA4CCB2008FF18F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A51ED071EA4CCB2008FF18F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A51ED0A1EA4CCB2008FF18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A51ED0B1EA4CCB2008FF18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A51ED0D1EA4CCB2008FF18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 983B539BDC51EFE845561628 /* Pods-GEMenuControllerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3896W3N2Y4;
+				INFOPLIST_FILE = GEMenuControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gloria.GEMenuControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1A51ED0E1EA4CCB2008FF18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33DCE5E0298E0F5BC773063F /* Pods-GEMenuControllerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3896W3N2Y4;
+				INFOPLIST_FILE = GEMenuControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gloria.GEMenuControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A51ECF01EA4CCB2008FF18F /* Build configuration list for PBXProject "GEMenuControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A51ED0A1EA4CCB2008FF18F /* Debug */,
+				1A51ED0B1EA4CCB2008FF18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A51ED0C1EA4CCB2008FF18F /* Build configuration list for PBXNativeTarget "GEMenuControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A51ED0D1EA4CCB2008FF18F /* Debug */,
+				1A51ED0E1EA4CCB2008FF18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A51ECED1EA4CCB2008FF18F /* Project object */;
+}
