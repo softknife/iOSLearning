@@ -15,10 +15,10 @@
 		1A51ED081EA4CCB2008FF18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A51ED061EA4CCB2008FF18F /* LaunchScreen.storyboard */; };
 		1AD8EA811EA5DA2C000F6915 /* GEMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA7F1EA5DA2C000F6915 /* GEMenuController.m */; };
 		1AD8EA821EA5DA2C000F6915 /* GEMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA801EA5DA2C000F6915 /* GEMenuController.xib */; };
-		1AD8EA8C1EA5DAA9000F6915 /* GEAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA851EA5DAA9000F6915 /* GEAnimatedTransitioning.m */; };
-		1AD8EA8D1EA5DAA9000F6915 /* GETransitionPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA871EA5DAA9000F6915 /* GETransitionPresentationController.m */; };
-		1AD8EA8E1EA5DAA9000F6915 /* GECustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA891EA5DAA9000F6915 /* GECustomTransition.m */; };
-		1AD8EA8F1EA5DAA9000F6915 /* GECustomTransitionStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA8B1EA5DAA9000F6915 /* GECustomTransitionStyle.m */; };
+		1AD8EA991EA5DF6C000F6915 /* GEAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA921EA5DF6C000F6915 /* GEAnimatedTransitioning.m */; };
+		1AD8EA9A1EA5DF6C000F6915 /* GECustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA941EA5DF6C000F6915 /* GECustomTransition.m */; };
+		1AD8EA9B1EA5DF6C000F6915 /* GECustomTransitionStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA961EA5DF6C000F6915 /* GECustomTransitionStyle.m */; };
+		1AD8EA9C1EA5DF6C000F6915 /* GETransitionPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA981EA5DF6C000F6915 /* GETransitionPresentationController.m */; };
 		78734C35B25ED4A4B08FD99E /* libPods-GEMenuControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8E7DA881126CA26538DE7D /* libPods-GEMenuControllerDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -36,14 +36,14 @@
 		1AD8EA7E1EA5DA2C000F6915 /* GEMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMenuController.h; sourceTree = "<group>"; };
 		1AD8EA7F1EA5DA2C000F6915 /* GEMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuController.m; sourceTree = "<group>"; };
 		1AD8EA801EA5DA2C000F6915 /* GEMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEMenuController.xib; sourceTree = "<group>"; };
-		1AD8EA841EA5DAA9000F6915 /* GEAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAnimatedTransitioning.h; sourceTree = "<group>"; };
-		1AD8EA851EA5DAA9000F6915 /* GEAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAnimatedTransitioning.m; sourceTree = "<group>"; };
-		1AD8EA861EA5DAA9000F6915 /* GETransitionPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GETransitionPresentationController.h; sourceTree = "<group>"; };
-		1AD8EA871EA5DAA9000F6915 /* GETransitionPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GETransitionPresentationController.m; sourceTree = "<group>"; };
-		1AD8EA881EA5DAA9000F6915 /* GECustomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECustomTransition.h; sourceTree = "<group>"; };
-		1AD8EA891EA5DAA9000F6915 /* GECustomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GECustomTransition.m; sourceTree = "<group>"; };
-		1AD8EA8A1EA5DAA9000F6915 /* GECustomTransitionStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECustomTransitionStyle.h; sourceTree = "<group>"; };
-		1AD8EA8B1EA5DAA9000F6915 /* GECustomTransitionStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GECustomTransitionStyle.m; sourceTree = "<group>"; };
+		1AD8EA911EA5DF6C000F6915 /* GEAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAnimatedTransitioning.h; sourceTree = "<group>"; };
+		1AD8EA921EA5DF6C000F6915 /* GEAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAnimatedTransitioning.m; sourceTree = "<group>"; };
+		1AD8EA931EA5DF6C000F6915 /* GECustomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECustomTransition.h; sourceTree = "<group>"; };
+		1AD8EA941EA5DF6C000F6915 /* GECustomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GECustomTransition.m; sourceTree = "<group>"; };
+		1AD8EA951EA5DF6C000F6915 /* GECustomTransitionStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECustomTransitionStyle.h; sourceTree = "<group>"; };
+		1AD8EA961EA5DF6C000F6915 /* GECustomTransitionStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GECustomTransitionStyle.m; sourceTree = "<group>"; };
+		1AD8EA971EA5DF6C000F6915 /* GETransitionPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GETransitionPresentationController.h; sourceTree = "<group>"; };
+		1AD8EA981EA5DF6C000F6915 /* GETransitionPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GETransitionPresentationController.m; sourceTree = "<group>"; };
 		1B8E7DA881126CA26538DE7D /* libPods-GEMenuControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GEMenuControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DCE5E0298E0F5BC773063F /* Pods-GEMenuControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEMenuControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEMenuControllerDemo/Pods-GEMenuControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		983B539BDC51EFE845561628 /* Pods-GEMenuControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEMenuControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GEMenuControllerDemo/Pods-GEMenuControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		1A51ECEC1EA4CCB2008FF18F = {
 			isa = PBXGroup;
 			children = (
-				1AD8EA831EA5DAA9000F6915 /* GEMenuTransition */,
+				1AD8EA901EA5DF6C000F6915 /* GECustomTransition */,
 				1A51ECF71EA4CCB2008FF18F /* GEMenuControllerDemo */,
 				1A51ECF61EA4CCB2008FF18F /* Products */,
 				5942CEFABE33A3CFEE954CA1 /* Pods */,
@@ -107,19 +107,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AD8EA831EA5DAA9000F6915 /* GEMenuTransition */ = {
+		1AD8EA901EA5DF6C000F6915 /* GECustomTransition */ = {
 			isa = PBXGroup;
 			children = (
-				1AD8EA841EA5DAA9000F6915 /* GEAnimatedTransitioning.h */,
-				1AD8EA851EA5DAA9000F6915 /* GEAnimatedTransitioning.m */,
-				1AD8EA861EA5DAA9000F6915 /* GETransitionPresentationController.h */,
-				1AD8EA871EA5DAA9000F6915 /* GETransitionPresentationController.m */,
-				1AD8EA881EA5DAA9000F6915 /* GECustomTransition.h */,
-				1AD8EA891EA5DAA9000F6915 /* GECustomTransition.m */,
-				1AD8EA8A1EA5DAA9000F6915 /* GECustomTransitionStyle.h */,
-				1AD8EA8B1EA5DAA9000F6915 /* GECustomTransitionStyle.m */,
+				1AD8EA911EA5DF6C000F6915 /* GEAnimatedTransitioning.h */,
+				1AD8EA921EA5DF6C000F6915 /* GEAnimatedTransitioning.m */,
+				1AD8EA931EA5DF6C000F6915 /* GECustomTransition.h */,
+				1AD8EA941EA5DF6C000F6915 /* GECustomTransition.m */,
+				1AD8EA951EA5DF6C000F6915 /* GECustomTransitionStyle.h */,
+				1AD8EA961EA5DF6C000F6915 /* GECustomTransitionStyle.m */,
+				1AD8EA971EA5DF6C000F6915 /* GETransitionPresentationController.h */,
+				1AD8EA981EA5DF6C000F6915 /* GETransitionPresentationController.m */,
 			);
-			path = GEMenuTransition;
+			path = GECustomTransition;
 			sourceTree = "<group>";
 		};
 		5942CEFABE33A3CFEE954CA1 /* Pods */ = {
@@ -263,14 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD8EA991EA5DF6C000F6915 /* GEAnimatedTransitioning.m in Sources */,
+				1AD8EA9A1EA5DF6C000F6915 /* GECustomTransition.m in Sources */,
 				1A51ED001EA4CCB2008FF18F /* ViewController.m in Sources */,
-				1AD8EA8E1EA5DAA9000F6915 /* GECustomTransition.m in Sources */,
 				1A51ECFD1EA4CCB2008FF18F /* AppDelegate.m in Sources */,
-				1AD8EA8D1EA5DAA9000F6915 /* GETransitionPresentationController.m in Sources */,
+				1AD8EA9B1EA5DF6C000F6915 /* GECustomTransitionStyle.m in Sources */,
 				1AD8EA811EA5DA2C000F6915 /* GEMenuController.m in Sources */,
+				1AD8EA9C1EA5DF6C000F6915 /* GETransitionPresentationController.m in Sources */,
 				1A51ECFA1EA4CCB2008FF18F /* main.m in Sources */,
-				1AD8EA8F1EA5DAA9000F6915 /* GECustomTransitionStyle.m in Sources */,
-				1AD8EA8C1EA5DAA9000F6915 /* GEAnimatedTransitioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
