@@ -11,7 +11,8 @@
 
 @interface GEMenuController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+/** transition*/
+@property (nonatomic , strong) GECustomTransition *transition;
 @end
 
 @implementation GEMenuController
@@ -59,7 +60,7 @@
     };
     
     GEMenuController *menu = [[GEMenuController alloc] init];
-
+    menu.transition = transition;
     menu.modalPresentationStyle = UIModalPresentationCustom;
     menu.transitioningDelegate = transition;
     

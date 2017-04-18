@@ -20,7 +20,7 @@
 @class GECustomTransition;
 @interface GETransitionPresentationController : UIPresentationController
 /** transition*/
-@property (nonatomic , strong) GECustomTransition *transition;
+@property (nonatomic , weak) GECustomTransition *transition;
 
 /** 代理*/
 @property (nonatomic , weak) id<GETransitionPresentationControllerDelegate> transitionDelegate;
