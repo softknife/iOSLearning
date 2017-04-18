@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoBroswerCellID" reuseIdentifier="PhotoBrowserCellID" id="mMI-49-gNW" customClass="GEPhotoPreviewCell">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-bd-qoa">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                    </scrollView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="sCQ-bd-qoa" firstAttribute="top" secondItem="mMI-49-gNW" secondAttribute="top" id="CB1-KQ-u1Q"/>
+                <constraint firstAttribute="bottom" secondItem="sCQ-bd-qoa" secondAttribute="bottom" id="HcD-AL-ZMA"/>
+                <constraint firstAttribute="trailing" secondItem="sCQ-bd-qoa" secondAttribute="trailing" id="dPL-af-KlV"/>
+                <constraint firstItem="sCQ-bd-qoa" firstAttribute="leading" secondItem="mMI-49-gNW" secondAttribute="leading" id="eeo-Qy-hVR"/>
+            </constraints>
+            <size key="customSize" width="283" height="271"/>
+            <connections>
+                <outlet property="imageScrollView" destination="sCQ-bd-qoa" id="vvl-Qf-ugO"/>
+            </connections>
+            <point key="canvasLocation" x="-121.5" y="118.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

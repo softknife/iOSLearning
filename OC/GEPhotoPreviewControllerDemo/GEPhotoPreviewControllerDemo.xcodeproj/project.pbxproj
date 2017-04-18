@@ -14,14 +14,22 @@
 		1AD8EA401EA5CBCD000F6915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA3F1EA5CBCD000F6915 /* Assets.xcassets */; };
 		1AD8EA431EA5CBCD000F6915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA411EA5CBCD000F6915 /* LaunchScreen.storyboard */; };
 		1AD8EA751EA5CC7E000F6915 /* GEIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA661EA5CC7E000F6915 /* GEIndexPath.m */; };
-		1AD8EA761EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA681EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m */; };
-		1AD8EA771EA5CC7E000F6915 /* GEPhotoBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6A1EA5CC7E000F6915 /* GEPhotoBrowserCell.m */; };
-		1AD8EA781EA5CC7E000F6915 /* GEPhotoBrowserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6B1EA5CC7E000F6915 /* GEPhotoBrowserCell.xib */; };
-		1AD8EA791EA5CC7E000F6915 /* GEPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6D1EA5CC7E000F6915 /* GEPhotoBrowserController.m */; };
-		1AD8EA7A1EA5CC7E000F6915 /* GEPhotoBrowserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6E1EA5CC7E000F6915 /* GEPhotoBrowserController.xib */; };
-		1AD8EA7B1EA5CC7E000F6915 /* GEPhotoBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA701EA5CC7E000F6915 /* GEPhotoBrowserLayout.m */; };
-		1AD8EA7C1EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA721EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m */; };
-		1AD8EA7D1EA5CC7E000F6915 /* GEPhotoBrowserTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA741EA5CC7E000F6915 /* GEPhotoBrowserTransition.m */; };
+		1AD8EA771EA5CC7E000F6915 /* GEPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6A1EA5CC7E000F6915 /* GEPhotoPreviewCell.m */; };
+		1AD8EA781EA5CC7E000F6915 /* GEPhotoPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6B1EA5CC7E000F6915 /* GEPhotoPreviewCell.xib */; };
+		1AD8EA791EA5CC7E000F6915 /* GEPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6D1EA5CC7E000F6915 /* GEPhotoPreviewController.m */; };
+		1AD8EA7A1EA5CC7E000F6915 /* GEPhotoPreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8EA6E1EA5CC7E000F6915 /* GEPhotoPreviewController.xib */; };
+		1AD8EA7B1EA5CC7E000F6915 /* GEPhotoPreviewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA701EA5CC7E000F6915 /* GEPhotoPreviewLayout.m */; };
+		1AD8EAA61EA5DF92000F6915 /* GEAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EA9F1EA5DF92000F6915 /* GEAnimatedTransitioning.m */; };
+		1AD8EAA71EA5DF92000F6915 /* GECustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAA11EA5DF92000F6915 /* GECustomTransition.m */; };
+		1AD8EAA81EA5DF92000F6915 /* GECustomTransitionStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAA31EA5DF92000F6915 /* GECustomTransitionStyle.m */; };
+		1AD8EAA91EA5DF92000F6915 /* GETransitionPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAA51EA5DF92000F6915 /* GETransitionPresentationController.m */; };
+		1AD8EAAD1EA5E043000F6915 /* UIView+GEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAAC1EA5E043000F6915 /* UIView+GEAdd.m */; };
+		1AD8EAB01EA5E11D000F6915 /* GEPreviewInnerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAAF1EA5E11D000F6915 /* GEPreviewInnerObject.m */; };
+		1AD8EAB31EA5E167000F6915 /* UIImageView+GEWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAB21EA5E167000F6915 /* UIImageView+GEWebCache.m */; };
+		1AD8EAB61EA5E184000F6915 /* UIImage+GESDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAB51EA5E184000F6915 /* UIImage+GESDImageCache.m */; };
+		1AD8EAB91EA5E192000F6915 /* NSString+GESDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EAB81EA5E192000F6915 /* NSString+GESDCache.m */; };
+		1AD8EABC1EA5E1A2000F6915 /* UIScreen+GEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8EABB1EA5E1A2000F6915 /* UIScreen+GEAdd.m */; };
+		8245E9EA98C29299EB1FE80C /* libPods-GEPhotoPreviewControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A416E1696DD62EFADB90DE6 /* libPods-GEPhotoPreviewControllerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,20 +45,37 @@
 		1AD8EA441EA5CBCD000F6915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD8EA651EA5CC7E000F6915 /* GEIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEIndexPath.h; sourceTree = "<group>"; };
 		1AD8EA661EA5CC7E000F6915 /* GEIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEIndexPath.m; sourceTree = "<group>"; };
-		1AD8EA671EA5CC7E000F6915 /* GEPhotoBrowserAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserAnimation.h; sourceTree = "<group>"; };
-		1AD8EA681EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserAnimation.m; sourceTree = "<group>"; };
-		1AD8EA691EA5CC7E000F6915 /* GEPhotoBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserCell.h; sourceTree = "<group>"; };
-		1AD8EA6A1EA5CC7E000F6915 /* GEPhotoBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserCell.m; sourceTree = "<group>"; };
-		1AD8EA6B1EA5CC7E000F6915 /* GEPhotoBrowserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEPhotoBrowserCell.xib; sourceTree = "<group>"; };
-		1AD8EA6C1EA5CC7E000F6915 /* GEPhotoBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserController.h; sourceTree = "<group>"; };
-		1AD8EA6D1EA5CC7E000F6915 /* GEPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserController.m; sourceTree = "<group>"; };
-		1AD8EA6E1EA5CC7E000F6915 /* GEPhotoBrowserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEPhotoBrowserController.xib; sourceTree = "<group>"; };
-		1AD8EA6F1EA5CC7E000F6915 /* GEPhotoBrowserLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserLayout.h; sourceTree = "<group>"; };
-		1AD8EA701EA5CC7E000F6915 /* GEPhotoBrowserLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserLayout.m; sourceTree = "<group>"; };
-		1AD8EA711EA5CC7E000F6915 /* GEPhotoBrowserPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserPresentation.h; sourceTree = "<group>"; };
-		1AD8EA721EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserPresentation.m; sourceTree = "<group>"; };
-		1AD8EA731EA5CC7E000F6915 /* GEPhotoBrowserTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoBrowserTransition.h; sourceTree = "<group>"; };
-		1AD8EA741EA5CC7E000F6915 /* GEPhotoBrowserTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoBrowserTransition.m; sourceTree = "<group>"; };
+		1AD8EA691EA5CC7E000F6915 /* GEPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoPreviewCell.h; sourceTree = "<group>"; };
+		1AD8EA6A1EA5CC7E000F6915 /* GEPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoPreviewCell.m; sourceTree = "<group>"; };
+		1AD8EA6B1EA5CC7E000F6915 /* GEPhotoPreviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEPhotoPreviewCell.xib; sourceTree = "<group>"; };
+		1AD8EA6C1EA5CC7E000F6915 /* GEPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoPreviewController.h; sourceTree = "<group>"; };
+		1AD8EA6D1EA5CC7E000F6915 /* GEPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoPreviewController.m; sourceTree = "<group>"; };
+		1AD8EA6E1EA5CC7E000F6915 /* GEPhotoPreviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GEPhotoPreviewController.xib; sourceTree = "<group>"; };
+		1AD8EA6F1EA5CC7E000F6915 /* GEPhotoPreviewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPhotoPreviewLayout.h; sourceTree = "<group>"; };
+		1AD8EA701EA5CC7E000F6915 /* GEPhotoPreviewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPhotoPreviewLayout.m; sourceTree = "<group>"; };
+		1AD8EA9E1EA5DF92000F6915 /* GEAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAnimatedTransitioning.h; sourceTree = "<group>"; };
+		1AD8EA9F1EA5DF92000F6915 /* GEAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAnimatedTransitioning.m; sourceTree = "<group>"; };
+		1AD8EAA01EA5DF92000F6915 /* GECustomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECustomTransition.h; sourceTree = "<group>"; };
+		1AD8EAA11EA5DF92000F6915 /* GECustomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GECustomTransition.m; sourceTree = "<group>"; };
+		1AD8EAA21EA5DF92000F6915 /* GECustomTransitionStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECustomTransitionStyle.h; sourceTree = "<group>"; };
+		1AD8EAA31EA5DF92000F6915 /* GECustomTransitionStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GECustomTransitionStyle.m; sourceTree = "<group>"; };
+		1AD8EAA41EA5DF92000F6915 /* GETransitionPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GETransitionPresentationController.h; sourceTree = "<group>"; };
+		1AD8EAA51EA5DF92000F6915 /* GETransitionPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GETransitionPresentationController.m; sourceTree = "<group>"; };
+		1AD8EAAB1EA5E043000F6915 /* UIView+GEAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GEAdd.h"; sourceTree = "<group>"; };
+		1AD8EAAC1EA5E043000F6915 /* UIView+GEAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GEAdd.m"; sourceTree = "<group>"; };
+		1AD8EAAE1EA5E11D000F6915 /* GEPreviewInnerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPreviewInnerObject.h; sourceTree = "<group>"; };
+		1AD8EAAF1EA5E11D000F6915 /* GEPreviewInnerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPreviewInnerObject.m; sourceTree = "<group>"; };
+		1AD8EAB11EA5E167000F6915 /* UIImageView+GEWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GEWebCache.h"; sourceTree = "<group>"; };
+		1AD8EAB21EA5E167000F6915 /* UIImageView+GEWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GEWebCache.m"; sourceTree = "<group>"; };
+		1AD8EAB41EA5E184000F6915 /* UIImage+GESDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GESDImageCache.h"; sourceTree = "<group>"; };
+		1AD8EAB51EA5E184000F6915 /* UIImage+GESDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GESDImageCache.m"; sourceTree = "<group>"; };
+		1AD8EAB71EA5E192000F6915 /* NSString+GESDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GESDCache.h"; sourceTree = "<group>"; };
+		1AD8EAB81EA5E192000F6915 /* NSString+GESDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GESDCache.m"; sourceTree = "<group>"; };
+		1AD8EABA1EA5E1A2000F6915 /* UIScreen+GEAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+GEAdd.h"; sourceTree = "<group>"; };
+		1AD8EABB1EA5E1A2000F6915 /* UIScreen+GEAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+GEAdd.m"; sourceTree = "<group>"; };
+		9A416E1696DD62EFADB90DE6 /* libPods-GEPhotoPreviewControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GEPhotoPreviewControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9783EE1B3F59909542C76C /* Pods-GEPhotoPreviewControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEPhotoPreviewControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEPhotoPreviewControllerDemo/Pods-GEPhotoPreviewControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B5EDAC41878754D2D06CAB1E /* Pods-GEPhotoPreviewControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEPhotoPreviewControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GEPhotoPreviewControllerDemo/Pods-GEPhotoPreviewControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,18 +83,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8245E9EA98C29299EB1FE80C /* libPods-GEPhotoPreviewControllerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10C212D60A87A3453B1E654D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A416E1696DD62EFADB90DE6 /* libPods-GEPhotoPreviewControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1AD8EA271EA5CBCD000F6915 = {
 			isa = PBXGroup;
 			children = (
+				1AD8EAAA1EA5E033000F6915 /* Other */,
+				1AD8EA9D1EA5DF92000F6915 /* GECustomTransition */,
 				1AD8EA641EA5CC7E000F6915 /* GEPhotoPreviewController */,
 				1AD8EA321EA5CBCD000F6915 /* GEPhotoPreviewControllerDemo */,
 				1AD8EA311EA5CBCD000F6915 /* Products */,
+				FEC8A3BF8BF1327E3FF7964E /* Pods */,
+				10C212D60A87A3453B1E654D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,24 +146,61 @@
 		1AD8EA641EA5CC7E000F6915 /* GEPhotoPreviewController */ = {
 			isa = PBXGroup;
 			children = (
+				1AD8EAAE1EA5E11D000F6915 /* GEPreviewInnerObject.h */,
+				1AD8EAAF1EA5E11D000F6915 /* GEPreviewInnerObject.m */,
 				1AD8EA651EA5CC7E000F6915 /* GEIndexPath.h */,
 				1AD8EA661EA5CC7E000F6915 /* GEIndexPath.m */,
-				1AD8EA671EA5CC7E000F6915 /* GEPhotoBrowserAnimation.h */,
-				1AD8EA681EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m */,
-				1AD8EA691EA5CC7E000F6915 /* GEPhotoBrowserCell.h */,
-				1AD8EA6A1EA5CC7E000F6915 /* GEPhotoBrowserCell.m */,
-				1AD8EA6B1EA5CC7E000F6915 /* GEPhotoBrowserCell.xib */,
-				1AD8EA6C1EA5CC7E000F6915 /* GEPhotoBrowserController.h */,
-				1AD8EA6D1EA5CC7E000F6915 /* GEPhotoBrowserController.m */,
-				1AD8EA6E1EA5CC7E000F6915 /* GEPhotoBrowserController.xib */,
-				1AD8EA6F1EA5CC7E000F6915 /* GEPhotoBrowserLayout.h */,
-				1AD8EA701EA5CC7E000F6915 /* GEPhotoBrowserLayout.m */,
-				1AD8EA711EA5CC7E000F6915 /* GEPhotoBrowserPresentation.h */,
-				1AD8EA721EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m */,
-				1AD8EA731EA5CC7E000F6915 /* GEPhotoBrowserTransition.h */,
-				1AD8EA741EA5CC7E000F6915 /* GEPhotoBrowserTransition.m */,
+				1AD8EA691EA5CC7E000F6915 /* GEPhotoPreviewCell.h */,
+				1AD8EA6A1EA5CC7E000F6915 /* GEPhotoPreviewCell.m */,
+				1AD8EA6B1EA5CC7E000F6915 /* GEPhotoPreviewCell.xib */,
+				1AD8EA6C1EA5CC7E000F6915 /* GEPhotoPreviewController.h */,
+				1AD8EA6D1EA5CC7E000F6915 /* GEPhotoPreviewController.m */,
+				1AD8EA6E1EA5CC7E000F6915 /* GEPhotoPreviewController.xib */,
+				1AD8EA6F1EA5CC7E000F6915 /* GEPhotoPreviewLayout.h */,
+				1AD8EA701EA5CC7E000F6915 /* GEPhotoPreviewLayout.m */,
 			);
 			path = GEPhotoPreviewController;
+			sourceTree = "<group>";
+		};
+		1AD8EA9D1EA5DF92000F6915 /* GECustomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8EA9E1EA5DF92000F6915 /* GEAnimatedTransitioning.h */,
+				1AD8EA9F1EA5DF92000F6915 /* GEAnimatedTransitioning.m */,
+				1AD8EAA01EA5DF92000F6915 /* GECustomTransition.h */,
+				1AD8EAA11EA5DF92000F6915 /* GECustomTransition.m */,
+				1AD8EAA21EA5DF92000F6915 /* GECustomTransitionStyle.h */,
+				1AD8EAA31EA5DF92000F6915 /* GECustomTransitionStyle.m */,
+				1AD8EAA41EA5DF92000F6915 /* GETransitionPresentationController.h */,
+				1AD8EAA51EA5DF92000F6915 /* GETransitionPresentationController.m */,
+			);
+			path = GECustomTransition;
+			sourceTree = "<group>";
+		};
+		1AD8EAAA1EA5E033000F6915 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8EABA1EA5E1A2000F6915 /* UIScreen+GEAdd.h */,
+				1AD8EABB1EA5E1A2000F6915 /* UIScreen+GEAdd.m */,
+				1AD8EAB71EA5E192000F6915 /* NSString+GESDCache.h */,
+				1AD8EAB81EA5E192000F6915 /* NSString+GESDCache.m */,
+				1AD8EAB41EA5E184000F6915 /* UIImage+GESDImageCache.h */,
+				1AD8EAB51EA5E184000F6915 /* UIImage+GESDImageCache.m */,
+				1AD8EAB11EA5E167000F6915 /* UIImageView+GEWebCache.h */,
+				1AD8EAB21EA5E167000F6915 /* UIImageView+GEWebCache.m */,
+				1AD8EAAB1EA5E043000F6915 /* UIView+GEAdd.h */,
+				1AD8EAAC1EA5E043000F6915 /* UIView+GEAdd.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FEC8A3BF8BF1327E3FF7964E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5EDAC41878754D2D06CAB1E /* Pods-GEPhotoPreviewControllerDemo.debug.xcconfig */,
+				AE9783EE1B3F59909542C76C /* Pods-GEPhotoPreviewControllerDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AD8EA471EA5CBCD000F6915 /* Build configuration list for PBXNativeTarget "GEPhotoPreviewControllerDemo" */;
 			buildPhases = (
+				FA3177C9A391D7C38978B760 /* [CP] Check Pods Manifest.lock */,
 				1AD8EA2C1EA5CBCD000F6915 /* Sources */,
 				1AD8EA2D1EA5CBCD000F6915 /* Frameworks */,
 				1AD8EA2E1EA5CBCD000F6915 /* Resources */,
+				5FECA4D32363BE7F539F2EB2 /* [CP] Embed Pods Frameworks */,
+				AFBB768EA74205E28B3F16D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,31 +265,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD8EA7A1EA5CC7E000F6915 /* GEPhotoBrowserController.xib in Resources */,
+				1AD8EA7A1EA5CC7E000F6915 /* GEPhotoPreviewController.xib in Resources */,
 				1AD8EA431EA5CBCD000F6915 /* LaunchScreen.storyboard in Resources */,
 				1AD8EA401EA5CBCD000F6915 /* Assets.xcassets in Resources */,
-				1AD8EA781EA5CC7E000F6915 /* GEPhotoBrowserCell.xib in Resources */,
+				1AD8EA781EA5CC7E000F6915 /* GEPhotoPreviewCell.xib in Resources */,
 				1AD8EA3E1EA5CBCD000F6915 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FECA4D32363BE7F539F2EB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GEPhotoPreviewControllerDemo/Pods-GEPhotoPreviewControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFBB768EA74205E28B3F16D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GEPhotoPreviewControllerDemo/Pods-GEPhotoPreviewControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3177C9A391D7C38978B760 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AD8EA2C1EA5CBCD000F6915 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD8EA771EA5CC7E000F6915 /* GEPhotoBrowserCell.m in Sources */,
-				1AD8EA761EA5CC7E000F6915 /* GEPhotoBrowserAnimation.m in Sources */,
+				1AD8EAAD1EA5E043000F6915 /* UIView+GEAdd.m in Sources */,
+				1AD8EA771EA5CC7E000F6915 /* GEPhotoPreviewCell.m in Sources */,
+				1AD8EAA81EA5DF92000F6915 /* GECustomTransitionStyle.m in Sources */,
+				1AD8EAB91EA5E192000F6915 /* NSString+GESDCache.m in Sources */,
+				1AD8EAA71EA5DF92000F6915 /* GECustomTransition.m in Sources */,
+				1AD8EABC1EA5E1A2000F6915 /* UIScreen+GEAdd.m in Sources */,
+				1AD8EAB01EA5E11D000F6915 /* GEPreviewInnerObject.m in Sources */,
 				1AD8EA3B1EA5CBCD000F6915 /* ViewController.m in Sources */,
+				1AD8EAA61EA5DF92000F6915 /* GEAnimatedTransitioning.m in Sources */,
+				1AD8EAB61EA5E184000F6915 /* UIImage+GESDImageCache.m in Sources */,
 				1AD8EA381EA5CBCD000F6915 /* AppDelegate.m in Sources */,
+				1AD8EAB31EA5E167000F6915 /* UIImageView+GEWebCache.m in Sources */,
 				1AD8EA751EA5CC7E000F6915 /* GEIndexPath.m in Sources */,
-				1AD8EA7D1EA5CC7E000F6915 /* GEPhotoBrowserTransition.m in Sources */,
+				1AD8EAA91EA5DF92000F6915 /* GETransitionPresentationController.m in Sources */,
 				1AD8EA351EA5CBCD000F6915 /* main.m in Sources */,
-				1AD8EA7C1EA5CC7E000F6915 /* GEPhotoBrowserPresentation.m in Sources */,
-				1AD8EA7B1EA5CC7E000F6915 /* GEPhotoBrowserLayout.m in Sources */,
-				1AD8EA791EA5CC7E000F6915 /* GEPhotoBrowserController.m in Sources */,
+				1AD8EA7B1EA5CC7E000F6915 /* GEPhotoPreviewLayout.m in Sources */,
+				1AD8EA791EA5CC7E000F6915 /* GEPhotoPreviewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +462,7 @@
 		};
 		1AD8EA481EA5CBCD000F6915 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5EDAC41878754D2D06CAB1E /* Pods-GEPhotoPreviewControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76364BYDWJ;
@@ -342,6 +476,7 @@
 		};
 		1AD8EA491EA5CBCD000F6915 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE9783EE1B3F59909542C76C /* Pods-GEPhotoPreviewControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76364BYDWJ;
@@ -372,6 +507,7 @@
 				1AD8EA491EA5CBCD000F6915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
