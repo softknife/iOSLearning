@@ -1,5 +1,5 @@
 //
-//  GETransitionStyle.h
+//  GECustomTransitionStyle.h
 //  GEMenuControllerDemo
 //
 //  Created by hjp on 17/4/18.
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^GETransitionBlock)(UIView *,id <UIViewControllerContextTransitioning>);
 
-@interface GETransitionStyle : NSObject
+@interface GECustomTransitionStyle : NSObject
 /** 初始值*/
 @property (nonatomic , assign,readonly) CGRect frame;
 /** 动画时间 
@@ -34,7 +34,7 @@ typedef void(^GETransitionBlock)(UIView *,id <UIViewControllerContextTransitioni
 /** hideStatusBar时是否需要动画*/
 @property (nonatomic , assign,readonly) UIStatusBarAnimation animation;
 
-/** 是否需要maskview*/
+/** 是否需要maskview,default is yes*/
 @property (nonatomic , assign ,getter=isNeedMaskView) BOOL needMaskView;
 
 /**

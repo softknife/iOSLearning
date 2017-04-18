@@ -1,15 +1,15 @@
 //
-//  CustomPresentationController.m
-//  ExcellentLearning
+//  GETransitionPresentationController.m
+//  GEMenuControllerDemo
 //
 //  Created by hjp on 16/7/19.
 //  Copyright © 2016年 西安恒谦教育科技股份有限公司. All rights reserved.
 //
 
-#import "GEMenuPresentationController.h"
-#import "GEMenuTransition.h"
+#import "GETransitionPresentationController.h"
+#import "GECustomTransition.h"
 
-@implementation GEMenuPresentationController
+@implementation GETransitionPresentationController
 
 
 
@@ -33,7 +33,7 @@
     
     [maskButton addTarget:self action:@selector(maskButtonTouch:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.transitionDelegate menuPresentationControllerDidMaskViewAdd:maskButton];
+    [self.transitionDelegate transitionPresentationControllerDidMaskViewAdd:maskButton];
     
 }
 
@@ -64,11 +64,11 @@
 
 - (void)maskButtonTouch:(UIButton *)button
 {
-    [self.transitionDelegate menuPresentationControllerDidMaskViewWillClick:button];
+    [self.transitionDelegate transitionPresentationControllerDidMaskViewWillClick:button];
     
     [self.presentedViewController dismissViewControllerAnimated:YES completion:^{
         
-        [self.transitionDelegate menuPresentationControllerDidMaskViewDidClick:button];
+        [self.transitionDelegate transitionPresentationControllerDidMaskViewDidClick:button];
     }];
 }
 @end

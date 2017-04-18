@@ -7,7 +7,7 @@
 //
 
 #import "GEMenuController.h"
-#import "GEMenuTransition.h"
+#import "GECustomTransition.h"
 
 @interface GEMenuController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -30,14 +30,14 @@
 {
     CGRect bounds = [UIScreen mainScreen].bounds;
 
-    GEMenuTransition *transition = [GEMenuTransition transition];
+    GECustomTransition *transition = [GECustomTransition transition];
     
     CGFloat width = 200;
     CGFloat height = 300;
     CGFloat x = bounds.size.width - width - 20 ;
     CGFloat y = 64 +1;
     
-    GETransitionStyle *style = [GETransitionStyle styleWithRect:CGRectMake(x, y, width, height) transitionDuration:0.4];
+    GECustomTransitionStyle *style = [GECustomTransitionStyle styleWithRect:CGRectMake(x, y, width, height) transitionDuration:0.4];
     
     style.maskColor = [UIColor greenColor];
     [style configStatusBarConditionWhenPresentationOccurWithHide:YES animation:UIStatusBarAnimationFade];

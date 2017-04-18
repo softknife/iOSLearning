@@ -6,15 +6,15 @@
 //  Copyright © 2016年 西安恒谦教育科技股份有限公司. All rights reserved.
 //
 
-#import "GEMenuTransition.h"
-#import "GEMenuAnimation.h"
-#import "GEMenuPresentationController.h"
+#import "GECustomTransition.h"
+#import "GEAnimatedTransitioning.h"
+#import "GETransitionPresentationController.h"
 
-@interface GEMenuTransition ()<GEMenuPresentationControllerDelegate>
+@interface GECustomTransition ()<GETransitionPresentationControllerDelegate>
 /** animationTranstion*/
-@property (nonatomic , strong) GEMenuAnimation *animation;
+@property (nonatomic , strong) GEAnimatedTransitioning *animation;
 @end
-@implementation GEMenuTransition
+@implementation GECustomTransition
 
 + (instancetype)transition
 {
@@ -26,7 +26,7 @@
 {
     if (self = [super init]) {
         
-        self.animation = [GEMenuAnimation new];
+        self.animation = [GEAnimatedTransitioning new];
     
     }
     
@@ -38,7 +38,7 @@
 // presentationController
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
 {
-    GEMenuPresentationController *presentation = [[GEMenuPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+    GETransitionPresentationController *presentation = [[GETransitionPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
     presentation.transition = self; // 保持transition
     presentation.transitionDelegate = self;
     
@@ -63,24 +63,24 @@
     
 }
 
-#pragma mark - GEMenuPresentationControllerDelegate
-- (void)menuPresentationControllerDidMaskViewAdd:(UIView *)maskView
+#pragma mark - GECustomPresentationControllerDelegate
+- (void)transitionPresentationControllerDidMaskViewAdd:(UIView *)maskView
 {
-    if ([self.delegate respondsToSelector:@selector(menuTransitionDidMaskViewAdd:)]) {
-        [self.delegate menuTransitionDidMaskViewAdd:maskView];
+    if ([self.delegate respondsToSelector:@selector(customTransitionDidMaskViewAdd:)]) {
+        [self.delegate customTransitionDidMaskViewAdd:maskView];
     }
 }
 
-- (void)menuPresentationControllerDidMaskViewWillClick:(UIView *)maskView
+- (void)transitionPresentationControllerDidMaskViewWillClick:(UIView *)maskView
 {
-    if ([self.delegate respondsToSelector:@selector(menuTransitionDidMaskViewWillClick:)]) {
-        [self.delegate menuTransitionDidMaskViewWillClick:maskView];
+    if ([self.delegate respondsToSelector:@selector(customTransitionDidMaskViewWillClick:)]) {
+        [self.delegate customTransitionDidMaskViewWillClick:maskView];
     }
 }
-- (void)menuPresentationControllerDidMaskViewDidClick:(UIView *)maskView
+- (void)transitionPresentationControllerDidMaskViewDidClick:(UIView *)maskView
 {
-    if ([self.delegate respondsToSelector:@selector(menuTransitionDidMaskViewDidClick:)]) {
-        [self.delegate menuTransitionDidMaskViewDidClick:maskView];
+    if ([self.delegate respondsToSelector:@selector(customTransitionDidMaskViewDidClick:)]) {
+        [self.delegate customTransitionDidMaskViewDidClick:maskView];
     }
 }
 

@@ -1,17 +1,17 @@
 //
-//  CustomAnimatedTranstioning.m
+//  GEAnimatedTransitioning.m
 //  ExcellentLearning
 //
 //  Created by hjp on 16/7/19.
 //  Copyright © 2016年 西安恒谦教育科技股份有限公司. All rights reserved.
 //
 
-#import "GEMenuAnimation.h"
+#import "GEAnimatedTransitioning.h"
 #import <Masonry.h>
 
 const CGFloat kDefaultDuration = 0.5;
 
-@implementation GEMenuAnimation
+@implementation GEAnimatedTransitioning
 
 // This is used for percent driven interactive transitions, as well as for container controllers that have companion animations that might need to
 // synchronize with the main animation.

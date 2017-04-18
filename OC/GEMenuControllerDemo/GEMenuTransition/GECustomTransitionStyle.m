@@ -6,9 +6,9 @@
 //  Copyright © 2017年 eric. All rights reserved.
 //
 
-#import "GETransitionStyle.h"
+#import "GECustomTransitionStyle.h"
 
-@implementation GETransitionStyle
+@implementation GECustomTransitionStyle
 
 - (UIColor *)maskColor
 {
@@ -51,13 +51,12 @@
  */
 + (instancetype)styleWithRect:(CGRect)frame transitionDuration:(NSTimeInterval)duration
 {
-    GETransitionStyle *style = [[self alloc] __initWithRect:frame transitionDuration:duration];
 
-    return style;
+    return  [[self alloc] initWithRect:frame transitionDuration:duration];
     
 }
 
-- (instancetype)__initWithRect:(CGRect)frame transitionDuration:(NSTimeInterval)duration
+- (instancetype)initWithRect:(CGRect)frame transitionDuration:(NSTimeInterval)duration
 {
     if (self = [super  init]) {
         _frame = frame;

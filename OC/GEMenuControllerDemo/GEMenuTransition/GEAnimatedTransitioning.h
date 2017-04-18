@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GETransitionStyle.h"
+#import "GECustomTransitionStyle.h"
 
 typedef NS_ENUM(NSInteger,AnimationType) {
     
@@ -19,10 +19,10 @@ typedef NS_ENUM(NSInteger,AnimationType) {
 
 
 
-@interface GEMenuAnimation : NSObject<UIViewControllerAnimatedTransitioning>
+@interface GEAnimatedTransitioning : NSObject<UIViewControllerAnimatedTransitioning>
 
 /** animatedFeature*/
-@property (nonatomic , strong)  GETransitionStyle *transionStyle;
+@property (nonatomic , strong)  GECustomTransitionStyle *transionStyle;
 
 /** present/dismiss*/
 @property (nonatomic , assign) AnimationType animateType;
