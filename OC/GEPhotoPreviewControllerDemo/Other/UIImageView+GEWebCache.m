@@ -84,7 +84,7 @@ NSString *const GEImageDefaultUserPlaceholder = @"yx_ss_user_avatar";
 
 /**  原始图  回调  */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
-                                orignalUrlString:(NSString *)orignalUrlString
+                                orignalURLString:(NSString *)orignalUrlString
                                      placeholder:(NSString *)placeholder
                                        completed:(SDExternalCompletionBlock)completedBlock
 {
@@ -124,7 +124,7 @@ NSString *const GEImageDefaultUserPlaceholder = @"yx_ss_user_avatar";
 
 /**  原始图  回调  进度条 */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
-                                orignalUrlString:(NSString *)orignalUrlString
+                                orignalURLString:(NSString *)orignalUrlString
                                      placeholder:(NSString *)placeholder
                                     progressType:(GEImageViewProgressValueType)type
                                         progress:(SDWebImageDownloaderProgressBlock)progressBlock

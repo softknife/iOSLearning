@@ -8,18 +8,18 @@
 
 #import "GEPhotoPreviewCell.h"
 #import "GEPreviewInnerObject.h"
+
 #import "UIImage+GESDImageCache.h"
 #import "UIImageView+GEWebCache.h"
 #import "NSString+GESDCache.h"
 #import "UIScreen+GEAdd.h"
 #import "UIView+GEAdd.h"
 
+#import <Masonry.h>
 
 NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
 
 @interface GEPhotoPreviewCell ()<UIScrollViewDelegate>
-@property (weak, nonatomic)  UITapGestureRecognizer *tapGesture;
-@property (weak, nonatomic)  UILongPressGestureRecognizer *longPressGesture;
 
 
 //@property (weak, nonatomic) UIActivityIndicatorView *activityView;
@@ -34,15 +34,7 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
 {
     [super awakeFromNib];
     
-    self.tapGesture.numberOfTapsRequired = 2;
     
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.userInteractionEnabled = YES;
-    imageView.clipsToBounds = YES;
-
-    [self.imageScrollView addSubview:imageView];
-    _imageView = imageView;
-
 
 //    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
 //    activityView.frame = CGRectMake([UIScreen screenWidth]/2 - 16, [UIScreen screenHeight]/2 - 16, 32, 32);
@@ -52,19 +44,15 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
 //    [self.imageScrollView addSubview:activityView];
 
     
-    self.imageScrollView.maximumZoomScale = 2.0;
-    self.imageScrollView.bouncesZoom = YES;
     self.imageScrollView.decelerationRate = UIScrollViewDecelerationRateFast;
     //设置最小伸缩比例
-    self.imageScrollView.minimumZoomScale = 1.0;
     self.imageScrollView.delegate = self;
-    self.imageScrollView.showsVerticalScrollIndicator = NO;
-    self.imageScrollView.showsHorizontalScrollIndicator = NO;
+  
     
 
     // 手势
     UITapGestureRecognizer *tapOneGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOne:)];
-    [self addGestureRecognizer:tapOneGesture];
+    [self.contentView addGestureRecognizer:tapOneGesture];
     
     UITapGestureRecognizer *tapTwoGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTwo:)];
     tapTwoGesture.numberOfTapsRequired = 2;
@@ -75,28 +63,15 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
     
     [tapOneGesture requireGestureRecognizerToFail:tapTwoGesture];
 
-
+ 
+//    UISwipeGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+//
+//    [self.contentView addGestureRecognizer:panGes];
 
 
 }
 
 
-
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-
-//    if (self.activity && ![self.activity isAnimating]) {
-//        
-//        [self.activity startAnimating];
-//    }
-    
-  
-    self.imageScrollView.contentSize = CGSizeMake(self.ge_w, self.ge_h);
-    self.imageView.frame = self.bounds;
-    self.imageView.ge_w = [UIScreen screenWidth];
-}
 
 #pragma mark - Data
 - (void)setPhotoObject:(GEPreviewInnerObject *)photoObject
@@ -119,7 +94,7 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
             case GEPreviewInnerObjectTypeNet:
             {
                 __weak typeof(self) weakSelf = self;
-                [self.imageView ge_setOrignalImageViewWithThumbURLString:photoObject.thumbnailUrl orignalUrlString:photoObject.orignalUrl placeholder:photoObject.praceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                [self.imageView ge_setOrignalImageViewWithThumbURLString:photoObject.thumbnailUrl orignalURLString:photoObject.orignalUrl placeholder:photoObject.praceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                     
                     weakSelf.imageView.contentMode = UIViewContentModeScaleAspectFit;
                     
@@ -206,6 +181,12 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
     }
 }
 
+- (void)pan:(UIPanGestureRecognizer *)sender {
+    
+    CGPoint location = [sender locationInView:self.contentView];
+    
+    NSLog(@"location:%@",NSStringFromCGPoint(location));
+}
 
 - (void)zoomImageView:(CGFloat)scale
 {

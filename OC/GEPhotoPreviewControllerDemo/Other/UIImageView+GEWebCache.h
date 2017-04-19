@@ -41,13 +41,13 @@ UIKIT_EXTERN NSString *const GEImageDefaultUserPlaceholder;
 
 /**   大图 回调 */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
-                                orignalUrlString:(NSString *)orignalUrlString
+                                orignalURLString:(NSString *)orignalUrlString
                                      placeholder:(NSString *)placeholder
                                        completed:(SDExternalCompletionBlock)completedBlock;
 
 /** 大图  回调  进度条 */
 - (void)ge_setOrignalImageViewWithThumbURLString:(NSString *)thumbUrlString
-                                orignalUrlString:(NSString *)orignalUrlString
+                                orignalURLString:(NSString *)orignalUrlString
                                      placeholder:(NSString *)placeholder
                                     progressType:(GEImageViewProgressValueType)type
                                         progress:(SDWebImageDownloaderProgressBlock)progressBlock

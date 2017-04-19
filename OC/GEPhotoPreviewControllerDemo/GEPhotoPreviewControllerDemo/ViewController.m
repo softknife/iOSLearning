@@ -39,7 +39,7 @@
     
     photoObject1.praceholder = @"yx_mm_gpres";
     photoObject1.thumbnailUrl = @"https://avatars1.githubusercontent.com/u/10254305?v=3&u=373d7bf218f00f8a3d55b4cec1c2fda40babadbd&s=400";
-    photoObject1.orignalUrl = @"http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg";
+    photoObject1.orignalUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492576419788&di=95572b657eadc0346e5935d85f34cd48&imgtype=0&src=http%3A%2F%2Fs15.sinaimg.cn%2Fmw690%2F003vNYwKgy6EdhlrawKae%26690";
     
     photoObject1.photoType = GEPreviewInnerObjectTypeNet;
     
@@ -52,7 +52,7 @@
     photoObject2.photoType = GEPreviewInnerObjectTypeNet;
     
     
-    GEPhotoPreviewController *photoPreview = [GEPhotoPreviewController previewByPhotoObjects:@[photoObject,photoObject1,photoObject2] selectIndex:0];
+    GEPhotoPreviewController *photoPreview = [GEPhotoPreviewController previewByPhotoObjects:@[photoObject,photoObject1,photoObject2] selectIndex:1 ];
     
     photoPreview.delegate = self;
     photoPreview.dataSource = self;
@@ -68,7 +68,8 @@
 }
 - (void)photoPreview:(GEPhotoPreviewController *)photoBrowser tapImageView:(GEPreviewInnerObject *)photoObject item:(NSInteger)item
 {
-    [photoBrowser dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 - (void)photoPreview:(GEPhotoPreviewController *)photoBrowser longPressImageViewObject:(GEPreviewInnerObject *)photoObject image:(UIImage *)image item:(NSInteger)item
 {

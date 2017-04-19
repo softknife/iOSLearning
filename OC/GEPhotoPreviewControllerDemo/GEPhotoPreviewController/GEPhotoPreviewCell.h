@@ -32,7 +32,8 @@ typedef NS_ENUM(NSUInteger,GEPhotoPreviewCellGesture) {
 
 @property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
 
-@property (weak, nonatomic,readonly) UIImageView *imageView;
+//@property (weak, nonatomic,readonly) UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 /** 模型*/
 @property (nonatomic , strong) GEPreviewInnerObject *photoObject;
 /** 代理*/

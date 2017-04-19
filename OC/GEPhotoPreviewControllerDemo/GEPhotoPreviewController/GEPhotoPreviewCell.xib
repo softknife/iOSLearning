@@ -18,8 +18,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-bd-qoa">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-bd-qoa">
                         <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLa-mO-lUC">
+                                <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="aLa-mO-lUC" firstAttribute="centerX" secondItem="sCQ-bd-qoa" secondAttribute="centerX" id="71k-VN-mF4"/>
+                            <constraint firstItem="aLa-mO-lUC" firstAttribute="leading" secondItem="sCQ-bd-qoa" secondAttribute="leading" id="Ayx-lh-NIu"/>
+                            <constraint firstItem="aLa-mO-lUC" firstAttribute="top" secondItem="sCQ-bd-qoa" secondAttribute="top" id="Eyi-Q1-UDW"/>
+                            <constraint firstAttribute="trailing" secondItem="aLa-mO-lUC" secondAttribute="trailing" id="L1p-PK-Wpu"/>
+                            <constraint firstItem="aLa-mO-lUC" firstAttribute="height" secondItem="sCQ-bd-qoa" secondAttribute="height" id="O3o-Ka-kiF"/>
+                            <constraint firstItem="aLa-mO-lUC" firstAttribute="centerY" secondItem="sCQ-bd-qoa" secondAttribute="centerY" id="Yyc-aF-1wE"/>
+                            <constraint firstAttribute="bottom" secondItem="aLa-mO-lUC" secondAttribute="bottom" id="hc4-cn-dFx"/>
+                            <constraint firstItem="aLa-mO-lUC" firstAttribute="width" secondItem="sCQ-bd-qoa" secondAttribute="width" id="tVY-nG-0q9"/>
+                        </constraints>
                     </scrollView>
                 </subviews>
             </view>
@@ -34,8 +49,9 @@
             <size key="customSize" width="283" height="271"/>
             <connections>
                 <outlet property="imageScrollView" destination="sCQ-bd-qoa" id="vvl-Qf-ugO"/>
+                <outlet property="imageView" destination="aLa-mO-lUC" id="LKa-aT-Vb9"/>
             </connections>
-            <point key="canvasLocation" x="-121.5" y="118.5"/>
+            <point key="canvasLocation" x="-489" y="113"/>
         </collectionViewCell>
     </objects>
 </document>
