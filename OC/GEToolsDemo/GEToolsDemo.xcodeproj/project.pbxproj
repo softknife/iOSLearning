@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ABD8E8C1EA7095200DE709C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8E8B1EA7095200DE709C /* main.m */; };
+		1ABD8E8F1EA7095200DE709C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8E8E1EA7095200DE709C /* AppDelegate.m */; };
+		1ABD8E921EA7095200DE709C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8E911EA7095200DE709C /* ViewController.m */; };
+		1ABD8E951EA7095200DE709C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABD8E931EA7095200DE709C /* Main.storyboard */; };
+		1ABD8E971EA7095200DE709C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABD8E961EA7095200DE709C /* Assets.xcassets */; };
+		1ABD8E9A1EA7095200DE709C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABD8E981EA7095200DE709C /* LaunchScreen.storyboard */; };
+		1ABD8EFC1EA715D200DE709C /* GELogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8ED71EA715D200DE709C /* GELogger.m */; };
+		1ABD8EFD1EA715D200DE709C /* NSDate+GEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EDA1EA715D200DE709C /* NSDate+GEAdd.m */; };
+		1ABD8EFE1EA715D200DE709C /* NSString+GESDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EDC1EA715D200DE709C /* NSString+GESDCache.m */; };
+		1ABD8EFF1EA715D200DE709C /* NSString+GETime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EDE1EA715D200DE709C /* NSString+GETime.m */; };
+		1ABD8F001EA715D200DE709C /* NSBundle+GEVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EE11EA715D200DE709C /* NSBundle+GEVersion.m */; };
+		1ABD8F011EA715D200DE709C /* UIApplication+HQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EE31EA715D200DE709C /* UIApplication+HQExtension.m */; };
+		1ABD8F021EA715D200DE709C /* UIDevice+GEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EE51EA715D200DE709C /* UIDevice+GEExtension.m */; };
+		1ABD8F031EA715D200DE709C /* UIScreen+GEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EE71EA715D200DE709C /* UIScreen+GEAdd.m */; };
+		1ABD8F041EA715D200DE709C /* UIImage+GEFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EEA1EA715D200DE709C /* UIImage+GEFile.m */; };
+		1ABD8F051EA715D200DE709C /* UIImage+GEResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EEC1EA715D200DE709C /* UIImage+GEResize.m */; };
+		1ABD8F061EA715D200DE709C /* UIImage+GESDDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EEE1EA715D200DE709C /* UIImage+GESDDownloader.m */; };
+		1ABD8F071EA715D200DE709C /* UIImage+GESDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EF01EA715D200DE709C /* UIImage+GESDImageCache.m */; };
+		1ABD8F081EA715D200DE709C /* UIImage+Other.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EF21EA715D200DE709C /* UIImage+Other.m */; };
+		1ABD8F091EA715D200DE709C /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EF51EA715D200DE709C /* UIBarButtonItem+Badge.m */; };
+		1ABD8F0A1EA715D200DE709C /* UIImageView+GEWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EF71EA715D200DE709C /* UIImageView+GEWebCache.m */; };
+		1ABD8F0B1EA715D200DE709C /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EF91EA715D200DE709C /* UITabBar+Badge.m */; };
+		1ABD8F0C1EA715D200DE709C /* UIView+GEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD8EFB1EA715D200DE709C /* UIView+GEAdd.m */; };
+		823EEC85BFF6460E5072AC91 /* libPods-GEToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F0DF8090C5A84D091D1D31 /* libPods-GEToolsDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1ABD8E871EA7095200DE709C /* GEToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABD8E8B1EA7095200DE709C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1ABD8E8D1EA7095200DE709C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1ABD8E8E1EA7095200DE709C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1ABD8E901EA7095200DE709C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1ABD8E911EA7095200DE709C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1ABD8E941EA7095200DE709C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1ABD8E961EA7095200DE709C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ABD8E991EA7095200DE709C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1ABD8E9B1EA7095200DE709C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ABD8ED61EA715D200DE709C /* GELogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GELogger.h; sourceTree = "<group>"; };
+		1ABD8ED71EA715D200DE709C /* GELogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GELogger.m; sourceTree = "<group>"; };
+		1ABD8ED91EA715D200DE709C /* NSDate+GEAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GEAdd.h"; sourceTree = "<group>"; };
+		1ABD8EDA1EA715D200DE709C /* NSDate+GEAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GEAdd.m"; sourceTree = "<group>"; };
+		1ABD8EDB1EA715D200DE709C /* NSString+GESDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GESDCache.h"; sourceTree = "<group>"; };
+		1ABD8EDC1EA715D200DE709C /* NSString+GESDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GESDCache.m"; sourceTree = "<group>"; };
+		1ABD8EDD1EA715D200DE709C /* NSString+GETime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GETime.h"; sourceTree = "<group>"; };
+		1ABD8EDE1EA715D200DE709C /* NSString+GETime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GETime.m"; sourceTree = "<group>"; };
+		1ABD8EE01EA715D200DE709C /* NSBundle+GEVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+GEVersion.h"; sourceTree = "<group>"; };
+		1ABD8EE11EA715D200DE709C /* NSBundle+GEVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+GEVersion.m"; sourceTree = "<group>"; };
+		1ABD8EE21EA715D200DE709C /* UIApplication+HQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+HQExtension.h"; sourceTree = "<group>"; };
+		1ABD8EE31EA715D200DE709C /* UIApplication+HQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+HQExtension.m"; sourceTree = "<group>"; };
+		1ABD8EE41EA715D200DE709C /* UIDevice+GEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+GEExtension.h"; sourceTree = "<group>"; };
+		1ABD8EE51EA715D200DE709C /* UIDevice+GEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+GEExtension.m"; sourceTree = "<group>"; };
+		1ABD8EE61EA715D200DE709C /* UIScreen+GEAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+GEAdd.h"; sourceTree = "<group>"; };
+		1ABD8EE71EA715D200DE709C /* UIScreen+GEAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+GEAdd.m"; sourceTree = "<group>"; };
+		1ABD8EE91EA715D200DE709C /* UIImage+GEFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GEFile.h"; sourceTree = "<group>"; };
+		1ABD8EEA1EA715D200DE709C /* UIImage+GEFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GEFile.m"; sourceTree = "<group>"; };
+		1ABD8EEB1EA715D200DE709C /* UIImage+GEResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GEResize.h"; sourceTree = "<group>"; };
+		1ABD8EEC1EA715D200DE709C /* UIImage+GEResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GEResize.m"; sourceTree = "<group>"; };
+		1ABD8EED1EA715D200DE709C /* UIImage+GESDDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GESDDownloader.h"; sourceTree = "<group>"; };
+		1ABD8EEE1EA715D200DE709C /* UIImage+GESDDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GESDDownloader.m"; sourceTree = "<group>"; };
+		1ABD8EEF1EA715D200DE709C /* UIImage+GESDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GESDImageCache.h"; sourceTree = "<group>"; };
+		1ABD8EF01EA715D200DE709C /* UIImage+GESDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GESDImageCache.m"; sourceTree = "<group>"; };
+		1ABD8EF11EA715D200DE709C /* UIImage+Other.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Other.h"; sourceTree = "<group>"; };
+		1ABD8EF21EA715D200DE709C /* UIImage+Other.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Other.m"; sourceTree = "<group>"; };
+		1ABD8EF41EA715D200DE709C /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
+		1ABD8EF51EA715D200DE709C /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
+		1ABD8EF61EA715D200DE709C /* UIImageView+GEWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GEWebCache.h"; sourceTree = "<group>"; };
+		1ABD8EF71EA715D200DE709C /* UIImageView+GEWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GEWebCache.m"; sourceTree = "<group>"; };
+		1ABD8EF81EA715D200DE709C /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
+		1ABD8EF91EA715D200DE709C /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
+		1ABD8EFA1EA715D200DE709C /* UIView+GEAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GEAdd.h"; sourceTree = "<group>"; };
+		1ABD8EFB1EA715D200DE709C /* UIView+GEAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GEAdd.m"; sourceTree = "<group>"; };
+		4F379501A46F973B12C22CD8 /* Pods-GEToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GEToolsDemo/Pods-GEToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		67ADE725255AB6DBA2338A73 /* Pods-GEToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEToolsDemo/Pods-GEToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F5F0DF8090C5A84D091D1D31 /* libPods-GEToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GEToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ABD8E841EA7095200DE709C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823EEC85BFF6460E5072AC91 /* libPods-GEToolsDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ABD8E7E1EA7095200DE709C = {
+			isa = PBXGroup;
+			children = (
+				1ABD8EA11EA7096300DE709C /* GETools */,
+				1ABD8E891EA7095200DE709C /* GEToolsDemo */,
+				1ABD8E881EA7095200DE709C /* Products */,
+				8E22D055B3580BC96B52DB66 /* Pods */,
+				9D21F8FB0C9F6175B42FEA5A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1ABD8E881EA7095200DE709C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8E871EA7095200DE709C /* GEToolsDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ABD8E891EA7095200DE709C /* GEToolsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8E8D1EA7095200DE709C /* AppDelegate.h */,
+				1ABD8E8E1EA7095200DE709C /* AppDelegate.m */,
+				1ABD8E901EA7095200DE709C /* ViewController.h */,
+				1ABD8E911EA7095200DE709C /* ViewController.m */,
+				1ABD8E931EA7095200DE709C /* Main.storyboard */,
+				1ABD8E961EA7095200DE709C /* Assets.xcassets */,
+				1ABD8E981EA7095200DE709C /* LaunchScreen.storyboard */,
+				1ABD8E9B1EA7095200DE709C /* Info.plist */,
+				1ABD8E8A1EA7095200DE709C /* Supporting Files */,
+			);
+			path = GEToolsDemo;
+			sourceTree = "<group>";
+		};
+		1ABD8E8A1EA7095200DE709C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8E8B1EA7095200DE709C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1ABD8EA11EA7096300DE709C /* GETools */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8ED51EA715D200DE709C /* LogTool */,
+				1ABD8ED81EA715D200DE709C /* NSCategory */,
+				1ABD8EDF1EA715D200DE709C /* UIApplicationCategory */,
+				1ABD8EE81EA715D200DE709C /* UIImageCategory */,
+				1ABD8EF31EA715D200DE709C /* UIKitCategory */,
+			);
+			path = GETools;
+			sourceTree = "<group>";
+		};
+		1ABD8ED51EA715D200DE709C /* LogTool */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8ED61EA715D200DE709C /* GELogger.h */,
+				1ABD8ED71EA715D200DE709C /* GELogger.m */,
+			);
+			path = LogTool;
+			sourceTree = "<group>";
+		};
+		1ABD8ED81EA715D200DE709C /* NSCategory */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8ED91EA715D200DE709C /* NSDate+GEAdd.h */,
+				1ABD8EDA1EA715D200DE709C /* NSDate+GEAdd.m */,
+				1ABD8EDB1EA715D200DE709C /* NSString+GESDCache.h */,
+				1ABD8EDC1EA715D200DE709C /* NSString+GESDCache.m */,
+				1ABD8EDD1EA715D200DE709C /* NSString+GETime.h */,
+				1ABD8EDE1EA715D200DE709C /* NSString+GETime.m */,
+			);
+			path = NSCategory;
+			sourceTree = "<group>";
+		};
+		1ABD8EDF1EA715D200DE709C /* UIApplicationCategory */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8EE01EA715D200DE709C /* NSBundle+GEVersion.h */,
+				1ABD8EE11EA715D200DE709C /* NSBundle+GEVersion.m */,
+				1ABD8EE21EA715D200DE709C /* UIApplication+HQExtension.h */,
+				1ABD8EE31EA715D200DE709C /* UIApplication+HQExtension.m */,
+				1ABD8EE41EA715D200DE709C /* UIDevice+GEExtension.h */,
+				1ABD8EE51EA715D200DE709C /* UIDevice+GEExtension.m */,
+				1ABD8EE61EA715D200DE709C /* UIScreen+GEAdd.h */,
+				1ABD8EE71EA715D200DE709C /* UIScreen+GEAdd.m */,
+			);
+			path = UIApplicationCategory;
+			sourceTree = "<group>";
+		};
+		1ABD8EE81EA715D200DE709C /* UIImageCategory */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8EE91EA715D200DE709C /* UIImage+GEFile.h */,
+				1ABD8EEA1EA715D200DE709C /* UIImage+GEFile.m */,
+				1ABD8EEB1EA715D200DE709C /* UIImage+GEResize.h */,
+				1ABD8EEC1EA715D200DE709C /* UIImage+GEResize.m */,
+				1ABD8EED1EA715D200DE709C /* UIImage+GESDDownloader.h */,
+				1ABD8EEE1EA715D200DE709C /* UIImage+GESDDownloader.m */,
+				1ABD8EEF1EA715D200DE709C /* UIImage+GESDImageCache.h */,
+				1ABD8EF01EA715D200DE709C /* UIImage+GESDImageCache.m */,
+				1ABD8EF11EA715D200DE709C /* UIImage+Other.h */,
+				1ABD8EF21EA715D200DE709C /* UIImage+Other.m */,
+			);
+			path = UIImageCategory;
+			sourceTree = "<group>";
+		};
+		1ABD8EF31EA715D200DE709C /* UIKitCategory */ = {
+			isa = PBXGroup;
+			children = (
+				1ABD8EF41EA715D200DE709C /* UIBarButtonItem+Badge.h */,
+				1ABD8EF51EA715D200DE709C /* UIBarButtonItem+Badge.m */,
+				1ABD8EF61EA715D200DE709C /* UIImageView+GEWebCache.h */,
+				1ABD8EF71EA715D200DE709C /* UIImageView+GEWebCache.m */,
+				1ABD8EF81EA715D200DE709C /* UITabBar+Badge.h */,
+				1ABD8EF91EA715D200DE709C /* UITabBar+Badge.m */,
+				1ABD8EFA1EA715D200DE709C /* UIView+GEAdd.h */,
+				1ABD8EFB1EA715D200DE709C /* UIView+GEAdd.m */,
+			);
+			path = UIKitCategory;
+			sourceTree = "<group>";
+		};
+		8E22D055B3580BC96B52DB66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F379501A46F973B12C22CD8 /* Pods-GEToolsDemo.debug.xcconfig */,
+				67ADE725255AB6DBA2338A73 /* Pods-GEToolsDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D21F8FB0C9F6175B42FEA5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5F0DF8090C5A84D091D1D31 /* libPods-GEToolsDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ABD8E861EA7095200DE709C /* GEToolsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ABD8E9E1EA7095200DE709C /* Build configuration list for PBXNativeTarget "GEToolsDemo" */;
+			buildPhases = (
+				52B59293BCFA08C123C4E406 /* [CP] Check Pods Manifest.lock */,
+				1ABD8E831EA7095200DE709C /* Sources */,
+				1ABD8E841EA7095200DE709C /* Frameworks */,
+				1ABD8E851EA7095200DE709C /* Resources */,
+				D32A87FC7C772E15547FFF76 /* [CP] Embed Pods Frameworks */,
+				26BBB58BABBB431853BAB4DF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEToolsDemo;
+			productName = GEToolsDemo;
+			productReference = 1ABD8E871EA7095200DE709C /* GEToolsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ABD8E7F1EA7095200DE709C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = eric;
+				TargetAttributes = {
+					1ABD8E861EA7095200DE709C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 76364BYDWJ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1ABD8E821EA7095200DE709C /* Build configuration list for PBXProject "GEToolsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ABD8E7E1EA7095200DE709C;
+			productRefGroup = 1ABD8E881EA7095200DE709C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ABD8E861EA7095200DE709C /* GEToolsDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ABD8E851EA7095200DE709C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABD8E9A1EA7095200DE709C /* LaunchScreen.storyboard in Resources */,
+				1ABD8E971EA7095200DE709C /* Assets.xcassets in Resources */,
+				1ABD8E951EA7095200DE709C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26BBB58BABBB431853BAB4DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GEToolsDemo/Pods-GEToolsDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52B59293BCFA08C123C4E406 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D32A87FC7C772E15547FFF76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GEToolsDemo/Pods-GEToolsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ABD8E831EA7095200DE709C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABD8F031EA715D200DE709C /* UIScreen+GEAdd.m in Sources */,
+				1ABD8F0B1EA715D200DE709C /* UITabBar+Badge.m in Sources */,
+				1ABD8F051EA715D200DE709C /* UIImage+GEResize.m in Sources */,
+				1ABD8E921EA7095200DE709C /* ViewController.m in Sources */,
+				1ABD8F021EA715D200DE709C /* UIDevice+GEExtension.m in Sources */,
+				1ABD8F041EA715D200DE709C /* UIImage+GEFile.m in Sources */,
+				1ABD8F061EA715D200DE709C /* UIImage+GESDDownloader.m in Sources */,
+				1ABD8EFE1EA715D200DE709C /* NSString+GESDCache.m in Sources */,
+				1ABD8EFC1EA715D200DE709C /* GELogger.m in Sources */,
+				1ABD8F0A1EA715D200DE709C /* UIImageView+GEWebCache.m in Sources */,
+				1ABD8F081EA715D200DE709C /* UIImage+Other.m in Sources */,
+				1ABD8F071EA715D200DE709C /* UIImage+GESDImageCache.m in Sources */,
+				1ABD8EFF1EA715D200DE709C /* NSString+GETime.m in Sources */,
+				1ABD8F091EA715D200DE709C /* UIBarButtonItem+Badge.m in Sources */,
+				1ABD8F011EA715D200DE709C /* UIApplication+HQExtension.m in Sources */,
+				1ABD8E8F1EA7095200DE709C /* AppDelegate.m in Sources */,
+				1ABD8E8C1EA7095200DE709C /* main.m in Sources */,
+				1ABD8EFD1EA715D200DE709C /* NSDate+GEAdd.m in Sources */,
+				1ABD8F0C1EA715D200DE709C /* UIView+GEAdd.m in Sources */,
+				1ABD8F001EA715D200DE709C /* NSBundle+GEVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1ABD8E931EA7095200DE709C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABD8E941EA7095200DE709C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1ABD8E981EA7095200DE709C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABD8E991EA7095200DE709C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1ABD8E9C1EA7095200DE709C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1ABD8E9D1EA7095200DE709C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1ABD8E9F1EA7095200DE709C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F379501A46F973B12C22CD8 /* Pods-GEToolsDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 76364BYDWJ;
+				INFOPLIST_FILE = GEToolsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gloria.GEToolsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1ABD8EA01EA7095200DE709C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67ADE725255AB6DBA2338A73 /* Pods-GEToolsDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 76364BYDWJ;
+				INFOPLIST_FILE = GEToolsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gloria.GEToolsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ABD8E821EA7095200DE709C /* Build configuration list for PBXProject "GEToolsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABD8E9C1EA7095200DE709C /* Debug */,
+				1ABD8E9D1EA7095200DE709C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ABD8E9E1EA7095200DE709C /* Build configuration list for PBXNativeTarget "GEToolsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABD8E9F1EA7095200DE709C /* Debug */,
+				1ABD8EA01EA7095200DE709C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1ABD8E7F1EA7095200DE709C /* Project object */;
+}
