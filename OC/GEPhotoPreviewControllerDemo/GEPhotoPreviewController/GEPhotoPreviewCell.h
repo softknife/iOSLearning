@@ -18,7 +18,9 @@ typedef NS_ENUM(NSUInteger,GEPhotoPreviewCellGesture) {
     GEPhotoPreviewCellGestureTapTwo,
     
     /// 长按
-    GEPhotoPreviewCellGestureLongPress
+    GEPhotoPreviewCellGestureLongPress,
+    
+ 
 };
 
 @class GEPhotoPreviewCell,GEPreviewInnerObject;
@@ -26,6 +28,8 @@ typedef NS_ENUM(NSUInteger,GEPhotoPreviewCellGesture) {
 
 @required
 - (BOOL)photoPreviewCell:(GEPhotoPreviewCell *)cell triggerGesture:(GEPhotoPreviewCellGesture)gesture;
+- (void)photoPreviewCell:(GEPhotoPreviewCell *)cell swipeGesture:(UISwipeGestureRecognizer *)gesture;
+- (void)photoPreviewCell:(GEPhotoPreviewCell *)cell panGesture:(UIPanGestureRecognizer *)gesture;
 
 @end
 @interface GEPhotoPreviewCell : UICollectionViewCell
@@ -38,6 +42,18 @@ typedef NS_ENUM(NSUInteger,GEPhotoPreviewCellGesture) {
 @property (nonatomic , strong) GEPreviewInnerObject *photoObject;
 /** 代理*/
 @property (nonatomic , weak) id<GEPhotoPreviewCellDelegate> delegate;
+
+
+/** 是否为往下滑动*/
+@property (nonatomic , assign ,readonly,getter=isPullDown) BOOL pullDown;
+/** translation*/
+@property (nonatomic , assign) CGPoint translation;
+
+/** UIPanGes begin DistanceY*/
+@property (nonatomic , assign) CGFloat distance;
+//
+/** flagTransform*/
+@property (nonatomic , assign) CGAffineTransform flagTransform;
 
 #pragma mark - Public
 + (CGRect)getBigImageRectWithImage:(GEPreviewInnerObject *)photoObject originalImageRect:(CGRect)origImageRect thumImageYMargin:(CGFloat)yMargin;

@@ -68,7 +68,7 @@
 }
 - (void)photoPreview:(GEPhotoPreviewController *)photoBrowser tapImageView:(GEPreviewInnerObject *)photoObject item:(NSInteger)item
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 - (void)photoPreview:(GEPhotoPreviewController *)photoBrowser longPressImageViewObject:(GEPreviewInnerObject *)photoObject image:(UIImage *)image item:(NSInteger)item

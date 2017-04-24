@@ -46,6 +46,14 @@ UIScrollViewDelegate>
 /** 记录底部提示条初始高度*/
 @property (nonatomic , assign) CGFloat bottomViewInitialHeight;
 
+/** Preview的containerView*/
+@property (nonatomic , weak) UIView *containerView;
+
+/** 是否是第一次启动*/
+@property (nonatomic , assign,getter = isFirstLoad) BOOL firstLoad;
+
+
+
 @end
 
 @implementation GEPhotoPreviewController
@@ -101,6 +109,8 @@ UIScrollViewDelegate>
     __weak typeof (self) weakSelf = self;
     style.customPresent = ^(UIView *animateView,id<UIViewControllerContextTransitioning> transitionContext){
         
+        
+        weakSelf.containerView = animateView.superview;
         
         // 调整view的透明度，颜色
         animateView.superview.backgroundColor = [UIColor blackColor];
@@ -187,6 +197,7 @@ UIScrollViewDelegate>
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.firstLoad = YES;
     
     self.view.frame = [UIScreen bounds];
     self.view.ge_w += 15;
@@ -194,15 +205,19 @@ UIScrollViewDelegate>
     self.pageControl.ge_w = self.titleLabel.ge_w;
 
     [self configSubViews];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [self.collectionView scrollToItemAtIndexPath:self.selectIndexPath.indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-
-    });
+   
 
 }
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
 
+    if (self.isFirstLoad) {
+        self.firstLoad = NO;
+        [self.collectionView scrollToItemAtIndexPath:self.selectIndexPath.indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+
+    }
+}
 
 
 
@@ -298,6 +313,7 @@ UIScrollViewDelegate>
     // 复原1.0缩放比例
     GEPhotoPreviewCell *phCell = (GEPhotoPreviewCell *)cell;
     phCell.imageScrollView.zoomScale = 1.0;
+    phCell.transform = CGAffineTransformIdentity;
     
 }
 
@@ -330,6 +346,9 @@ UIScrollViewDelegate>
 }
 
 
+
+
+
 #pragma mark - GEPhotoBrowserCellDelegate
 - (BOOL)photoPreviewCell:(GEPhotoPreviewCell *)cell triggerGesture:(GEPhotoPreviewCellGesture)gesture
 {
@@ -341,33 +360,33 @@ UIScrollViewDelegate>
         case GEPhotoPreviewCellGestureTapOne:
         {
            
-//            if (self.photoObjects.count == 1) {
-//                [self dismissViewControllerAnimated:YES completion:nil];
-//            }else{
-//                
-//              
-//                if (self.topView.hidden) {
-//                    self.topView.hidden = NO;
-//                }
-//                if (self.bottomView.hidden) {
-//                    self.bottomView.hidden = NO;
-//                }
-//                
-//                self.topViewConsHeight.constant = self.topViewConsHeight.constant == self.topViewInitialHeight?0:self.topViewInitialHeight;
-//                self.bottomViewConsHeight.constant = self.bottomViewConsHeight.constant == self.bottomViewInitialHeight?0:self.bottomViewInitialHeight;
-//                
-//                [UIView animateWithDuration:0.25 animations:^{
-//                    
-//                    [self.view layoutIfNeeded];
-//                    
-//                } completion:^(BOOL finished) {
-//                    
-//                    self.topView.hidden = self.topViewConsHeight.constant?NO:YES;
-//                    self.bottomView.hidden = self.bottomViewConsHeight.constant?NO:YES;
-//                }];
-//               
-//                
-//            }
+            if (self.photoObjects.count == 1) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }else{
+                
+              
+                if (self.topView.hidden) {
+                    self.topView.hidden = NO;
+                }
+                if (self.bottomView.hidden) {
+                    self.bottomView.hidden = NO;
+                }
+                
+                self.topViewConsHeight.constant = self.topViewConsHeight.constant == self.topViewInitialHeight?0:self.topViewInitialHeight;
+                self.bottomViewConsHeight.constant = self.bottomViewConsHeight.constant == self.bottomViewInitialHeight?0:self.bottomViewInitialHeight;
+                
+                [UIView animateWithDuration:0.25 animations:^{
+                    
+                    [self.view layoutIfNeeded];
+                    
+                } completion:^(BOOL finished) {
+                    
+                    self.topView.hidden = self.topViewConsHeight.constant?NO:YES;
+                    self.bottomView.hidden = self.bottomViewConsHeight.constant?NO:YES;
+                }];
+               
+                
+            }
             
             if ([self.delegate respondsToSelector:@selector(photoPreview:tapImageView:item:)]) {
                 [self.delegate photoPreview:self tapImageView:cell.photoObject item:indexPath.item];
@@ -409,7 +428,93 @@ UIScrollViewDelegate>
     
 }
 
+- (void)photoPreviewCell:(GEPhotoPreviewCell *)cell swipeGesture:(UISwipeGestureRecognizer *)gesture
+{
+    NSLog(@"swipe");
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 
+}
+
+- (void)photoPreviewCell:(GEPhotoPreviewCell *)cell panGesture:(UIPanGestureRecognizer *)gesture
+{
+    
+    
+    // http://blog.csdn.net/x32sky/article/details/43523771 矩阵变换 a == ScaleX ,d = ScaleY
+    
+    UIImageView *imageView = (UIImageView *)gesture.view;
+    
+    
+    CGPoint translation = [gesture translationInView:gesture.view];
+    
+    NSLog(@"translation:%@",NSStringFromCGPoint(translation));
+    
+    if (imageView.transform.ty >= 0) { // 原来位置及以下位置可以拖动
+        switch (gesture.state) {
+            case UIGestureRecognizerStateBegan:
+            {
+
+                cell.flagTransform = imageView.transform;
+                cell.distance = self.containerView.bounds.size.height - [imageView convertPoint:imageView.center toView:self.containerView].y;
+
+            }
+                break;
+            case UIGestureRecognizerStateChanged:
+            {
+                if (translation.y < 0) {
+                    imageView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
+
+                }else{
+                    
+                    // 缩放
+                    CGFloat deltaY = translation.y;
+                    
+                    CGFloat progress =  deltaY / cell.distance ;
+                    
+                    if (progress < 1 ) {
+                        
+                        imageView.transform = CGAffineTransformMakeScale( 1.0 - progress * 0.7, 1.0 - progress * 0.7);
+                        
+                    }
+                    
+                    // 拖动
+                    imageView.transform = CGAffineTransformTranslate(imageView.transform, translation.x - imageView.transform.tx, translation.y- imageView.transform.ty);
+                    
+                    cell.translation = translation;
+                    
+                    
+                }
+
+
+            }
+                break;
+                
+            case UIGestureRecognizerStateEnded:
+            {
+                
+                if (cell.isPullDown) {
+                    [self dismissViewControllerAnimated:YES completion:nil];
+
+                }else {
+                    
+                    [UIView animateWithDuration:0.25 animations:^{
+                        imageView.transform = CGAffineTransformIdentity;
+
+                    }];
+                }
+            }
+                break;
+            default:
+                break;
+        }
+    
+    }
+    
+   
+
+    
+
+}
 
 
 #pragma mark - GEPhotoPreviewAnimationDataSource
@@ -427,7 +532,11 @@ UIScrollViewDelegate>
 
 - (CGRect)startRectForPhotoPreviewAnimationDismiss
 {
-    return [self endRectForPhotoPreviewAnimationPresent];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.selectIndexPath.selectPage inSection:0];
+    GEPhotoPreviewCell *cell = (GEPhotoPreviewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    return [cell.imageView convertRect:cell.imageView.frame toView:self.containerView];
+//    return [self endRectForPhotoPreviewAnimationPresent];
 }
 
 - (CGRect)endRectForPhotoPreviewAnimationPresent

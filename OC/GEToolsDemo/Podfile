@@ -8,5 +8,6 @@ target 'GEToolsDemo' do
   # Pods for GEToolsDemo
 pod 'SDWebImage'
 pod 'CocoaLumberjack'
+pod 'YYCategories'
 
 end

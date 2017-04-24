@@ -19,12 +19,17 @@
 
 NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
 
-@interface GEPhotoPreviewCell ()<UIScrollViewDelegate>
+@interface GEPhotoPreviewCell ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 
 //@property (weak, nonatomic) UIActivityIndicatorView *activityView;
 /** activity*/
 //@property (nonatomic , weak) UIActivityIndicatorView *activity;
+
+/** swipe手势*/
+@property (nonatomic , weak) UISwipeGestureRecognizer *swipeGes;
+/** pan手势*/
+@property (nonatomic , weak) UIPanGestureRecognizer *panGes;
 
 @end
 @implementation GEPhotoPreviewCell
@@ -64,14 +69,32 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
     [tapOneGesture requireGestureRecognizerToFail:tapTwoGesture];
 
  
-//    UISwipeGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-//
-//    [self.contentView addGestureRecognizer:panGes];
+    UISwipeGestureRecognizer *swipeGes = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    swipeGes.direction = UISwipeGestureRecognizerDirectionDown|UISwipeGestureRecognizerDirectionUp;
+    swipeGes.delegate = self;
+    [self.imageView addGestureRecognizer:swipeGes];
 
+    UIPanGestureRecognizer *panGes =  [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    panGes.delegate = self;
+    [self.imageView addGestureRecognizer:panGes];
+    
+    
+    self.swipeGes = swipeGes;
+    self.panGes = panGes;
+    
 
 }
 
-
+- (void)setTranslation:(CGPoint)translation
+{
+    if (translation.x == _translation.x && translation.y > _translation.y ) {
+        _pullDown = YES;
+    }else{
+        _pullDown = NO;
+    }
+    
+    _translation = translation;
+}
 
 #pragma mark - Data
 - (void)setPhotoObject:(GEPreviewInnerObject *)photoObject
@@ -136,6 +159,8 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
     self.photoObject.zoomScale = scale;
 }
 
+
+
 #pragma mark - Event
 - (void)tapOne:(UITapGestureRecognizer *)sender{
     
@@ -181,16 +206,89 @@ NSString *const photoBrowserCellId = @"PhotoBrowserCellID";
     }
 }
 
+- (void)swipe:(UISwipeGestureRecognizer *)sender {
+    
+    switch (sender.state ) {
+//        case UIGestureRecognizerStateBegan: // 不触发
+//        {
+//            NSLog(@"swipeBegin");
+//        }
+//            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            NSLog(@"swipeEnd");
+            self.panGes.enabled = NO;
+
+            if ([self.delegate respondsToSelector:@selector(photoPreviewCell:swipeGesture:)]) {
+                [self.delegate photoPreviewCell:self swipeGesture:sender];
+            }
+        }
+            break;
+        default:
+            break;
+    }
+
+    
+   
+}
+
 - (void)pan:(UIPanGestureRecognizer *)sender {
     
-    CGPoint location = [sender locationInView:self.contentView];
     
-    NSLog(@"location:%@",NSStringFromCGPoint(location));
+    switch (sender.state ) {
+        case UIGestureRecognizerStateChanged:
+        {
+            NSLog(@"panChange");
+
+            self.swipeGes.enabled = NO;
+            
+
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            NSLog(@"panEnd");
+
+            self.swipeGes.enabled = YES;
+
+        }
+            break;
+        default:
+            break;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(photoPreviewCell:panGesture:)]) {
+        [self.delegate photoPreviewCell:self panGesture:sender];
+    }
+
+    
 }
 
 - (void)zoomImageView:(CGFloat)scale
 {
     [self.imageScrollView setZoomScale:scale animated:YES];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+        
+        UIPanGestureRecognizer *panGes = (UIPanGestureRecognizer *)gestureRecognizer;
+        
+        CGPoint point = [panGes translationInView:self.imageView];
+        if (point.x != 0) {
+            return NO;
+        }
+        
+    }
+    
+    return  YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 #pragma mark - Public

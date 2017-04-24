@@ -8,15 +8,20 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
   - CocoaLumberjack
   - SDWebImage
+  - YYCategories
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 8311463ddf9ee86a06ef92a071dd656c89244500
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: c2d7e6ddf9b833d6e142d0701fcd62eb176b8ba0
+PODFILE CHECKSUM: 572b4e2733197a5e683a0493acc6435d4dea221f
 
 COCOAPODS: 1.2.1.beta.1
