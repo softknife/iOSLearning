@@ -12,7 +12,7 @@ extension UITableViewDataSource{
             return 0
         }
         
-        var total : Int
+        var total : Int = 0
         for i in 0..<sections {
             
             let rows = tableView(temTableView, numberOfRowsInSection: i)

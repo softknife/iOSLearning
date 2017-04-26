@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='1-协议的基本使用'/>
         <page name='2-协议在代理中的使用场景'/>
@@ -8,5 +8,6 @@
         <page name='5-关联类型'/>
         <page name='6-协议中的mutating'/>
         <page name='7-协议的扩展'/>
+        <page name='8-协议与范型'/>
     </pages>
 </playground>
