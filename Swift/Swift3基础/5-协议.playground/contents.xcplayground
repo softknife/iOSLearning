@@ -7,5 +7,6 @@
         <page name='4-面向协议编程'/>
         <page name='5-关联类型'/>
         <page name='6-协议中的mutating'/>
+        <page name='7-协议的扩展'/>
     </pages>
 </playground>
