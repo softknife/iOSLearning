@@ -71,10 +71,10 @@ MemoryLayout<Double>.stride
 /*:
  3.我们再来看看 构造数据类型 的内存分布特点.
  
- 对于`Empty`空结构体的大小为 0，内存对齐为 1， 表明它可以存在于任何一个内存地址上。有趣的是 stride 为 1，这是因为尽管结构为空，但是当我们使用它创建一个实例的时候，它也必须要有一个唯一的地址。 内存碎片是不是由此产生的?
- 而对于`Demo`结构体,大小为9,内存对其为8, 数组中一节占用16个bytes, 可见,这种结构不是那么理想,凭空占用了7个bytes
+- 对于`Empty`空结构体的大小为 0，内存对齐为 1， 表明它可以存在于任何一个内存地址上。有趣的是 stride 为 1，这是因为尽管结构为空，但是当我们使用它创建一个实例的时候，它也必须要有一个唯一的地址。 内存碎片是不是由此产生的?
+-  而对于`Demo`结构体,大小为9,内存对其为8, 数组中一节占用16个bytes, 可见,这种结构不是那么理想,凭空占用了7个bytes
  
- 对于构造类型内存, stride是alignment的倍数,而和size不一定相关!
+- 对于构造类型内存, stride是alignment的倍数,而和size不一定相关!
  
  
  */
@@ -114,8 +114,55 @@ MemoryLayout<EnumDemo1.RawValue>.alignment
 MemoryLayout<EnumDemo1.RawValue>.stride
 
 
+/*:
+ 4.类的内存分布情况
+ - 由于类是引用类型,所以他所有的内存占用大小都是8个字节
+ */
+class EmptyClass{}
+
+MemoryLayout<EmptyClass>.size
+MemoryLayout<EmptyClass>.alignment
+MemoryLayout<EmptyClass>.stride
+
+
+class DemoClass{
+    let number : Int64 = 0
+    let flag = true
+}
+
+MemoryLayout<DemoClass>.size
+MemoryLayout<DemoClass>.alignment
+MemoryLayout<DemoClass>.stride
 
 
 /*:
- - 参考：http://www.swiftyper.com/2017/01/15/unsafe-swift/
+ 5.指针内存占用
+ - 学过C语言的同学都知道,指针操作(直接内存操作)是非常不安全的, 当然,如果你是老鸟,这种操作也可以帮你完成很多不可思议的工作!
+ - 基于Swift这门语言设计为安全的,所以,如果你真的想进行指针操作(C编程),Swift中提供了一套UnsafePointer的类型,帮我们完成指针操作!
+ - 通过Swift的指针类型名字,我们就可以很清晰的知道该指针的类型,是可变还是不可变,原生(raw)还是有类型的,是否为缓冲(buffer)类型, 总共8中类型的指针.
+
+ - `Unsafe[Mutable][Raw][Buffer]Pointer[<T>]`
+ 
+    - UnsafePointer<T>          UnsafeMutablePointer<T>
+    - UnsafeBufferPointer<T>    UnsafeMutableBufferPointer<T>
+    - UnsafeRawPointer          UnsafeMutableRawPointer
+    - UnsafeRawBufferPointer    UnsafeMutableRawBufferPointer
+ 
+   - Pointers are just memory addresses. Direct memory access is Unsafe. Mutable means you  can write to it. Raw means it points to a blob of bytes. Buffer means that it works like a collection. Generic <T> pointers are typed.
+ 
+ 
+ */
+
+/*:
+ - 5.1 使用无类型(Raw)指针
+ 
+ */
+
+
+
+
+/*:
+ 参考：
+ - http://www.swiftyper.com/2017/01/15/unsafe-swift/
+ - https://news.realm.io/news/goto-mike-ash-exploring-swift-memory-layout/
  */
