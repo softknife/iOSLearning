@@ -135,6 +135,24 @@ MemoryLayout<DemoClass>.alignment
 MemoryLayout<DemoClass>.stride
 
 
+class InnerClass{
+    struct InnerStruct {
+        let number : Int
+        let flag : Bool
+    }
+    
+    let str = InnerStruct(number: 1, flag: true)
+}
+
+MemoryLayout<InnerClass>.size
+MemoryLayout<InnerClass>.alignment
+MemoryLayout<InnerClass>.stride
+
+MemoryLayout<InnerClass.InnerStruct>.size
+MemoryLayout<InnerClass.InnerStruct>.alignment
+MemoryLayout<InnerClass.InnerStruct>.stride
+
+
 /*:
  5.指针内存占用
  - 学过C语言的同学都知道,指针操作(直接内存操作)是非常不安全的, 当然,如果你是老鸟,这种操作也可以帮你完成很多不可思议的工作!
@@ -158,6 +176,40 @@ MemoryLayout<DemoClass>.stride
  
  */
 
+let count = 2
+let stride = MemoryLayout<Int>.stride
+let alignment = MemoryLayout<Int>.alignment
+let byteCount = stride * count
+
+do {
+    print("Raw pointers test")
+    
+    // 申请byteCount大小的内存,对齐方式为alignment
+    let pointer = UnsafeMutableRawPointer.allocate(bytes: byteCount, alignedTo: alignment)
+    
+    // 保证作用于后,手动释放内存
+    defer {
+        pointer.deallocate(bytes: byteCount, alignedTo: alignment)
+    }
+    
+    // 存储Int类型的数字42
+    pointer.storeBytes(of: 42, as: Int.self)
+    // 步进一个步幅后,存储Int类型的数字12
+    pointer.advanced(by: stride).storeBytes(of: 12, as: Int.self)
+    
+    // 读取字节
+    pointer.load(as: Int.self)
+    pointer.advanced(by: stride).load(as: Int.self)
+    
+    
+    // 数组指针读取上面的内存数据
+    let bufferPointer = UnsafeRawBufferPointer(start: pointer, count: byteCount)
+    for (index,byte) in bufferPointer.enumerated() {
+        print("byte : \(index):\(byte)")
+    }
+    
+    
+}
 
 
 
