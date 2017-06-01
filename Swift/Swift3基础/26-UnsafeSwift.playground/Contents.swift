@@ -192,7 +192,7 @@ MemoryLayout<InnerClass.InnerStruct>.stride
  
  */
 
-let count = 2
+let count = 3
 let stride = MemoryLayout<Int>.stride
 let alignment = MemoryLayout<Int>.alignment
 let byteCount = stride * count
@@ -213,7 +213,7 @@ do {
     // 4.步进一个步幅后,存储Int类型的数字12(pointer+stride).storeBytes(of: 6, as: Int.self)。
     pointer.advanced(by: stride).storeBytes(of: 20, as: Int.self)
     // 因为pointer这个指针类型是 Strideable 的，我们也可以直接使用指针算术运算
-//    (pointer + stride).storeBytes(of: 10, as: Int.self)
+    (pointer + 2 * stride).storeBytes(of: 10, as: Int.self)
 //    pointer.advanced(by: stride).storeBytes(of: 10, as: Int.self)
     
     
@@ -221,11 +221,13 @@ do {
     // 5.读取字节
     pointer.load(as: Int.self)
     pointer.advanced(by: stride).load(as: Int.self)
-//    (pointer + stride).load(as: Int.self)
-//    pointer.advanced(by: stride).load(as: Int.self)
+    (pointer + 2 * stride).load(as: Int.self)
+    // 每次拿到的pointer都是从头开始的
+
     
     
     // 6.数组指针读取上面的内存数据
+    // UnsafeRawBufferPointer 类型以一系列字节的形式来读取内存。这意味着我们可以这些字节进行迭代，对其使用下标，或者使用 filter，map 以及 reduce 这些很酷的方法。缓冲类型指针使用了原生指针进行初始化。
     let bufferPointer = UnsafeRawBufferPointer(start: pointer, count: byteCount)
     for (index,byte) in bufferPointer.enumerated() {
         print("byte : \(index):\(byte)")
@@ -254,6 +256,43 @@ do {
     
     
 }
+
+
+
+/*:
+ - 5.2 使用类型指针
+ 
+ */
+
+let count1 = 3
+do {
+
+    print("有类型指针test")
+    let pointer = UnsafeMutablePointer<Int>.allocate(capacity: count1)
+    // 在使用类型指针前需要对其进行初始化，并在使用后销毁。这两个功能分别是使用 initialize 和 deinitialize 方法。
+    pointer.initialize(to: 0, count: count1)
+    
+    defer {
+        pointer.deinitialize(count: count1)
+        pointer.deallocate(capacity: count1)
+    }
+    
+    // 类型指针提供了 pointee 属性，它可以以类型安全的方式读取和存储值。
+    pointer.pointee = 42
+    // 当需要指针前进的时候，我们只需要指定想要前进的个数。类型指针会自动根据它所指向的数值类型来计算 stride 值。
+    pointer.advanced(by: 1).pointee = 20
+    pointer.pointee
+    pointer.advanced(by: 1).pointee
+    pointer.advanced(by: 2).pointee = 10
+    (pointer + 2).pointee
+    
+    let bufferPointer = UnsafeBufferPointer(start: pointer, count: count1)
+    for (index,value) in bufferPointer.enumerated() {
+        print("value \(index):\(value)")
+    }
+    
+}
+
 
 
 
