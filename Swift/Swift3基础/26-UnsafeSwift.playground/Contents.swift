@@ -286,12 +286,55 @@ do {
     pointer.advanced(by: 2).pointee = 10
     (pointer + 2).pointee
     
+    
+    // 有类型的缓冲型指针也会直接操作数值，而非字节
     let bufferPointer = UnsafeBufferPointer(start: pointer, count: count1)
     for (index,value) in bufferPointer.enumerated() {
         print("value \(index):\(value)")
     }
     
 }
+
+
+/*:
+ - 5.3 将无类型指针转换为类型指针
+ */
+
+do{
+
+    print("Converting raw pointers to typed pointers")
+    
+    let rawPointer = UnsafeMutableRawPointer.allocate(bytes: byteCount, alignedTo: alignment)
+    defer {
+        rawPointer.deallocate(bytes: byteCount, alignedTo: alignment)
+    }
+    
+    // 我们通过将内存绑定(binding)到指定的类型上来创建类型指针。通过对内存的绑定，我们可以通过类型安全的方法来访问它。当我们手动创建类型指针的时候，系统其实自动帮我们进行了内存绑定。
+    let typedPointer = rawPointer.bindMemory(to: Int.self, capacity: count)
+    typedPointer.initialize(to: 0, count: count)
+    defer {
+        typedPointer.deinitialize(count: count)
+    }
+    
+    
+    typedPointer.pointee = 42
+    typedPointer.advanced(by: 1).pointee = 6
+    (typedPointer + 2).pointee = 10
+    typedPointer.pointee
+    typedPointer.advanced(by: 1).pointee
+    typedPointer.advanced(by: 2).pointee
+    
+    let bufferPointer = UnsafeBufferPointer(start: typedPointer, count: count)
+    for (index,value) in bufferPointer.enumerated() {
+        print("value \(index) : \(value)")
+    }
+    
+
+}
+
+
+
+
 
 
 
