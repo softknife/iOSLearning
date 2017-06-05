@@ -101,14 +101,14 @@ MemoryLayout<Empty>.size
 MemoryLayout<Empty>.alignment
 MemoryLayout<Empty>.stride
 
-struct Demo{
+struct StructDemo{
     let number:Int64
     let result : Bool
 }
 
-MemoryLayout<Demo>.size
-MemoryLayout<Demo>.alignment
-MemoryLayout<Demo>.stride
+MemoryLayout<StructDemo>.size
+MemoryLayout<StructDemo>.alignment
+MemoryLayout<StructDemo>.stride
 
 enum EnumDemo {
     
@@ -333,7 +333,19 @@ do{
 }
 
 
+/*:
+ - 5.4 获取一个实例的字节
+ 很多时候我们需要从一个现存的实例里获取它的字节。这时可以使用 withUnsafeBytes(of:) 方法。
+ 
+ */
+do{
 
+    print("test getting the bytes of an instance")
+    
+    var demo = StructDemo(number: 12, result: true)
+    
+//    withUnsafeBytes(of: &<#T##T#>, <#T##body: (UnsafeRawBufferPointer) throws -> Result##(UnsafeRawBufferPointer) throws -> Result#>)
+}
 
 
 
