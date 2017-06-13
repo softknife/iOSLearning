@@ -337,6 +337,20 @@ do{
  - 5.4 获取一个实例的字节
  很多时候我们需要从一个现存的实例里获取它的字节。这时可以使用 withUnsafeBytes(of:) 方法。
  
+Invokes the given closure with a buffer pointer covering the raw bytes of the given argument.
+
+The buffer pointer argument to the `body` closure provides a collection
+interface to the raw bytes of `arg`. The buffer is the size of the
+instance passed as `arg` and does not include any remote storage.
+
+- Parameters:
+  - arg: An instance to temporarily access through a raw buffer pointer.
+  - body: A closure that takes a raw buffer pointer to the bytes of `arg` as its sole argument. If the closure has a return value, it is used as the return value of the `withUnsafeBytes(of:_:)` function. The buffer pointer argument is valid only for the duration of the closure's execution. // 注意 The buffer pointer argument 作用域仅限于closure,不要直接返回
+  - Returns: The return value of the `body` closure, if any. // 有或者无返回值
+
+  - SeeAlso: `withUnsafePointer(to:_:)`, `withUnsafeMutableBytes(of:_:)`
+ public func withUnsafeBytes<T, Result>(of arg: inout T, _ body: (UnsafeRawBufferPointer) throws -> Result) rethrows -> Result
+ 
  */
 do{
 
@@ -344,11 +358,97 @@ do{
     
     var demo = StructDemo(number: 12, result: true)
     
-//    withUnsafeBytes(of: &<#T##T#>, <#T##body: (UnsafeRawBufferPointer) throws -> Result##(UnsafeRawBufferPointer) throws -> Result#>)
+    withUnsafeBytes(of: &demo){ rawBytes in // rawBytes : UnsafeRawBufferPointer
+        
+        for byte in rawBytes {
+            
+            print(byte)
+            /*
+             12
+             0
+             0
+             0
+             0
+             0
+             0
+             0
+             1
+             可见内存对齐方式,确然!!
+             */
+        }
+        
+    }
+
 }
 
+/*:
+ ****************
+ */
+/*:
+ > Swift 操作指针的三大原则
+ 1. 不要让指针逃脱出作用域
+ */
+do {
+    print("1. Don't return the pointer from withUnsafeBytes!")
+    
+//    var demo = StructDemo(number: 12, result: true)
+//    
+//    let bytes = withUnsafeBytes<UnsafeRawBufferPointer>(of: &demo) { bytes in
+//        return bytes // strange bugs here we come ☠️☠️☠️
+//    }
+//    
+//    print("Horse is out of the barn!", bytes)  /// undefined !!!
+    // 本身这段代码就不能通过编译,即使能通过编译,我们也不能这么使用,因为指针一旦暴露给外部,那么就会成为不可控的因素,随时可以把你炸的粉身碎骨!
+}
 
+/*:
+ 2.一次只绑定一种类型
+    
+ - 绝对不要让一个内存同时绑定两个不同的类型。如果你需要临时这么做，可以使用 withMemoryRebound(to:capacity:) 来对内存进行重新绑定。
+    
+ - 并且，这条规则也表明了不要将一个基本类型(如 Int)重新绑定到一个自定义类型(如 class)上。不要做这种傻事。
+ */
+do {
+    print("2. Only bind to one type at a time!")
+    
+    let count = 3
+    let stride = MemoryLayout<Int16>.stride
+    let alignment = MemoryLayout<Int16>.alignment
+    let byteCount =  count * stride
+    
+    let pointer = UnsafeMutableRawPointer.allocate(bytes: byteCount, alignedTo: alignment)
+    
+    let typedPointer1 = pointer.bindMemory(to: UInt16.self, capacity: count)
+    
+    // Breakin' the Law... Breakin' the Law  (Undefined behavior)
+    let typedPointer2 = pointer.bindMemory(to: Bool.self, capacity: count * 2)
+    
+    // If you must, do it this way:
+    typedPointer1.withMemoryRebound(to: Bool.self, capacity: count * 2) {
+        (boolPointer: UnsafeMutablePointer<Bool>) in
+        print(boolPointer.pointee)  // See Rule #1, don't return the pointer
+    }
+}
 
+/*:
+ 3.不要超出内存范围
+ 
+ */
+do {
+    print("3. Don't walk off the end... whoops!")
+    
+    let count = 3
+    let stride = MemoryLayout<Int16>.stride
+    let alignment = MemoryLayout<Int16>.alignment
+    let byteCount =  count * stride
+    
+    let pointer = UnsafeMutableRawPointer.allocate(bytes: byteCount, alignedTo: alignment)
+    let bufferPointer = UnsafeRawBufferPointer(start: pointer, count: byteCount + 1) // OMG +1????
+    
+    for byte in bufferPointer {
+        print(byte)  // pawing through memory like an animal
+    }
+}
 
 
 /*:
