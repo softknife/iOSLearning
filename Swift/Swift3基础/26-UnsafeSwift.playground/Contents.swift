@@ -452,6 +452,76 @@ do {
 
 
 /*:
+ >示例
+ 生成随机数
+ 随机数在很多地方都有重要的作用，从游戏到机器学习。macOS 提供了 arc4random 方法用于随机数生成。不幸的是，这个方法无法在 Linux 上使用。并且，arc4random 方法只提供了 UInt32 类型的随机数。事实上，/dev/urandom 这个设备文件中就提供了无限的随机数。
+ 
+
+ */
+import Foundation
+
+enum RandomSource {
+    
+    static let file = fopen("/dev/urandom", "r")!
+    static let queue = DispatchQueue(label: "random")
+    
+    static func get(count: Int) -> [Int8] {
+        let capacity = count + 1 // fgets adds null termination
+        var data = UnsafeMutablePointer<Int8>.allocate(capacity: capacity)
+        defer {
+            data.deallocate(capacity: capacity)
+        }
+        queue.sync {
+            fgets(data, Int32(capacity), file)
+        }
+        return Array(UnsafeMutableBufferPointer(start: data, count: count))
+    }
+}
+
+/*
+ 为了确保整个系统中只存在一个 file 变量，我们对其使用了 static 修饰符。系统会在我们的进程结束时关闭文件。因为我们有可能在多个线程中同时获取随机数，所以需要使用一个串行的 GCD 队列来进行保护。
+ 
+ get 函数是所有功能完成的地方。首先，我们根据传入的大小分配了必要的内存，注意这里需要 +1 是因为 fets 函数总是以 \0 结束。接下来，我们就使用 fgets 函数从文件中读取数据，确保我们在串行队列中进行读取操作。最后，我们先将数据封装为一个 UnsafeMutableBufferPointer，并将其转化为一个数组。
+ */
+
+extension Integer {
+    
+    static var randomized: Self {
+        let numbers = RandomSource.get(count: MemoryLayout<Self>.size)
+        return numbers.withUnsafeBufferPointer { bufferPointer in
+            return bufferPointer.baseAddress!.withMemoryRebound(to: Self.self, capacity: 1) {
+                return $0.pointee
+            }
+        }
+        
+        /*
+         /// A pointer to the first element of the buffer.
+         ///
+         /// If the `baseAddress` of this buffer is `nil`, the count is zero. However,
+         /// a buffer can have a `count` of zero even with a non-`nil` base address.
+         public var baseAddress: UnsafePointer<Element>? { get }
+
+         */
+    }
+    
+}
+
+/*
+ 这里我们为 Integer 协议添加了一个静态属性，并为其提供了默认实现。我们首先获取了随机数，随后我们将获得字节数组重新绑定为所需要的类型，然后返回它的值。简单！
+ 
+ 就这样，我们使用 unsafe Swift 实现了一个类型安全的随机器生成方法。
+ */
+
+Int8.randomized
+UInt8.randomized
+Int16.randomized
+UInt16.randomized
+Int16.randomized
+UInt32.randomized
+Int64.randomized
+UInt64.randomized
+
+/*:
  参考：
  - http://www.swiftyper.com/2017/01/15/unsafe-swift/
  - https://news.realm.io/news/goto-mike-ash-exploring-swift-memory-layout/
