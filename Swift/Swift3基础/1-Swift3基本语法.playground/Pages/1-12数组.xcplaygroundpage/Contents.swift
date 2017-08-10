@@ -71,4 +71,8 @@ for element in array5[0..<2] {
     print(element)
 }
 
+array5.forEach { (ele) in
+    
+    print(ele)
+}
 
