@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='1-指针内存的申请与释放'/>
+        <page name='2-指针的移动与访问'/>
+        <page name='3-swift方式操作内存'/>
+        <page name='4-swift获取变量地址'/>
+    </pages>
+</playground>
