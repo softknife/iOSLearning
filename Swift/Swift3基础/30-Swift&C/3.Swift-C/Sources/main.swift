@@ -97,6 +97,27 @@ if true {
 }
 
 
+//////////////////////////////////////////////////////////////////////////////////////
+// 字符串
+//////////////////////////////////////////////////////////////////////////////////////
+// fputs是一个函数，具有的功能是向指定的文件写入一个字符串
+// stdout这个表达式指向一个与标准输出流（standard output stream）相关连的 FILE 对象。
+fputs("Hello world\n", stdout)
+
+// 使用c方式访问字符串中的每个字符
+"Hello world!".withCString {
+    let elem = $0 // UnsafePointer<Int>
+    debugPrint(elem.debugDescription)
+}
+
+// 获得一个字符的ASCII码值
+let asciiOfA = UInt8(ascii:"A")
+
+// 将某个数字转换成对应的字符
+let character = Character(UnicodeScalar(60))
+// 或者
+_ = String(describing: UnicodeScalar(60))
+
 
 
 
