@@ -11,4 +11,9 @@
 
 #include <stdio.h>
 
+// 通过地址访问有类型变量
+void printAddress(const int *p);
+int doubler(int *p);
+
+
 #endif /* TestC_h */

@@ -8,7 +8,6 @@
 
 #include "TestC.h"
 
-
 typedef struct{
 
     char name[5];
@@ -16,3 +15,20 @@ typedef struct{
     int anotherValue;
     
 } MyStruct;
+
+
+void printAddress(const int *p){
+    printf("%016lX\n",(unsigned long)p);
+}
+
+int doubler(int *p){
+    
+    *p = (*p) * 2;
+    
+    return *p;
+}
+
+
+
+
+

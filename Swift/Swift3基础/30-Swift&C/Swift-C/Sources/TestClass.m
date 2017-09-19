@@ -8,3 +8,11 @@
 
 #import "TestClass.h"
 
+
+void funcWithCallBack(void *context , CALLBACK callback)
+{
+    sleep(4);
+    
+    callback(context);
+}
+

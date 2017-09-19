@@ -17,6 +17,7 @@
 		1857BCCF1F53AEDD006E407D /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		1857BCD11F53AF01006E407D /* TestC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TestC.c; sourceTree = "<group>"; };
 		1857BCD21F53AF01006E407D /* TestC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestC.h; sourceTree = "<group>"; };
+		18B2E9EC1F70E37800BED14E /* Swift-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		OBJ_11 /* Swift-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "Swift-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -41,7 +42,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -49,7 +50,6 @@
 				OBJ_9 /* Tests */,
 				OBJ_10 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -58,8 +58,9 @@
 				OBJ_8 /* main.swift */,
 				1857BCCE1F53AEDD006E407D /* TestClass.h */,
 				1857BCCF1F53AEDD006E407D /* TestClass.m */,
-				1857BCD11F53AF01006E407D /* TestC.c */,
 				1857BCD21F53AF01006E407D /* TestC.h */,
+				1857BCD11F53AF01006E407D /* TestC.c */,
+				18B2E9EC1F70E37800BED14E /* Swift-C-Bridging-Header.h */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -110,7 +111,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
