@@ -18,5 +18,6 @@
         <page name='1-15可选类型与解包'/>
         <page name='1-16TypeAlias'/>
         <page name='1-17@autoclosure'/>
+        <page name='1-18Set使用'/>
     </pages>
 </playground>

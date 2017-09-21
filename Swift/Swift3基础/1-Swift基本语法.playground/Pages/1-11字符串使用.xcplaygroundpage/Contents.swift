@@ -80,10 +80,31 @@ for i in 0..<aString.characters.count {
 
 // 分割
 aString.components(separatedBy: ",")
+aString.split(separator: Character(","))
 
 
+/////////////////////////////////////////////////////////////////
+// swift4
+/////////////////////////////////////////////////////////////////
+// 1.String变成集合类型了!!! Swift is collection of character
+let swift4String = "Hello swift 4!"
+_ = swift4String.count
+swift4String.forEach {
+    print($0)
+}
 
+let ch = Character("4")
+let index = swift4String.index(of: ch)!
+print(index)
 
+// 2.换行字符串
+let paragraph = """
+<body>
+    <a> 多行字符串</a>
+</body>
 
+"""
+
+print(paragraph)
 
 

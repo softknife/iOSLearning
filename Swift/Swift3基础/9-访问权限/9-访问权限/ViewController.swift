@@ -31,13 +31,24 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController{
+    
+    // swift4中,我们可以在同文件的扩展中访问私有属性/方法
+    func accessPrivateProperty()  {
+        
+        print(privateProperty!)
+    }
+}
+
+
+
 class SameFileClass {
     
     func test()  {
         
         let vc = ViewController()
         vc.fileprivateProperty = "修改"
-        //vc.privateProperty = "修改" 这样就是错误的!
+//        vc.privateProperty = "修改" // 这样就是错误的!
     }
 }
 
