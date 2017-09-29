@@ -78,35 +78,34 @@ enum RequestKey : String {
     case  nest = "nest"
 }
 
-//extension RequestKey : Hashable {
-//
-//    var hashValue: Int {
-//        return rawValue.hashValue
-//    }
-//
-//}
+extension RequestKey : Hashable {
+
+    var hashValue: Int {
+        return rawValue.hashValue
+    }
+
+}
 
 typealias Parameter = [RequestKey:Any]
 
 
-//extension Dictionary where Key == String{ // 3.1之后就支持这样写了!! 之前需要这样写 Key:ExpressibleByStringLiteral
-//
-//    subscript( key:RequestKey) -> Value? {
-//
-//        get {
-//            return self[key.rawValue ]
-//        }
-//
-//        set {
-//            self[key.rawValue ] = newValue
-//        }
-//    }
-//
-//}
+extension Dictionary where Key == String{ // 3.1之后就支持这样写了!! 之前需要这样写 Key:ExpressibleByStringLiteral
+
+    subscript( key:RequestKey) -> Value? {
+
+        get {
+            return self[key.rawValue ]
+        }
+
+        set {
+            self[key.rawValue ] = newValue
+        }
+    }
+
+}
 
 
-
-let para : Parameter = [.code:"111",.nest:[RequestKey.code:"123"]]
+let para:Parameter = [.code:"111", .nest:[RequestKey.code:"123"]]
 
 print(para)
 
