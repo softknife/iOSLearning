@@ -19,7 +19,8 @@ class ViewController: UIViewController {
 //        learningRx3()
 //        leaningRx4()
 //        learningRx5()
-        learningRx6()
+//        learningRx6()
+        learningRx7()
     }
 
 
@@ -49,7 +50,7 @@ extension ViewController {
             onError: {print($0)},
             onCompleted: {print("completed")},
             onDisposed:{}
-            
+            // 除了skip还有ignoreElements() skipWhile{} skipUtil()等忽略方法
         )
         /*
          even : 2
@@ -248,5 +249,74 @@ extension ViewController {
 //        print(stringVariable.value)
         
         // 由于是对某种值创建的Observable,所以, value的修改就相当于调用onNext方法了, 同时,不能调用onError和onCompleted方法!
+    }
+}
+
+// MARK:- 忽略操作符的使用
+extension ViewController{
+    func learningRx7()  {
+        
+        let task = PublishSubject<String>()
+        
+        let bag = DisposeBag()
+        
+        
+        //  task.subscribe{print($0)}.disposed(by: bag)
+        
+        //1. skip 忽略前几个
+        //task.skip(2).subscribe{print($0)}.disposed(by: bag)
+        /*
+         next(T3)
+         next(T3)
+         next(T4)
+         completed
+         */
+        
+        // 2.ignoreElements 忽略所有的事件, 只保留complete
+        //task.ignoreElements().subscribe{print($0)}.disposed(by: bag)
+        /*
+         completed
+         */
+
+        // 3.skipWhile{} 条件忽略 表示忽略T3事件发生之前的所有其他事件
+        // task.skipWhile{ $0 != "T3" }.subscribe{ print($0) }.disposed(by: bag)
+        /*
+         next(T3)
+         next(T3)
+         next(T4)
+         completed
+         */
+        
+        
+        
+        // 4.distinctUtilChange() 去重忽略
+        // task.distinctUntilChanged().subscribe{print($0)}.disposed(by: bag)
+
+        /*
+         next(T1)
+         next(T2)
+         next(T3)
+         next(T4)
+         completed
+         */
+        
+        // 5.skipUntil 由另外一个observable触发
+         let bossIsAngry = PublishSubject<Void>()
+         task.skipUntil(bossIsAngry).subscribe{print($0)}.disposed(by: bag)
+        /*
+         next(T4)
+         completed
+         */
+        
+        
+        task.onNext("T1")
+        task.onNext("T2")
+        task.onNext("T3")
+        task.onNext("T3")
+        
+        bossIsAngry.onNext(())
+        task.onNext("T4")
+        task.onCompleted()
+        
     }
 }
