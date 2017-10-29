@@ -16,11 +16,12 @@ skipOperaterBasicUsage("忽略序列中的特定事件")
 
 takeOperaterBasicUsage("获取序列中的特定事件")
 
+toArrayOperateBasicUsage("转换操作toArray的使用")
+scanOperateBasicUsage("转换操作scan的使用")
+mapOperateBasicUsage("转换操纵map的使用")
+flatMapOperateBasicUsage("转化操作flatMap的使用")
 
+combineObservablesBasicUsage("合并多个Observables")
 
-
-
-
-
-
+combineEventsBasicUsage("事件合并")
 
