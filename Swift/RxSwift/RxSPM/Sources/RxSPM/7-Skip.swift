@@ -15,7 +15,6 @@ func skipOperaterBasicUsage(_ desc:String)  {
     print(desc)
     
     let task = PublishSubject<String>()
-    
     let bag = DisposeBag()
     
     
