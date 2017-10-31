@@ -27,8 +27,9 @@ combineEventsBasicUsage("事件合并")
 
 combine_translateBetweenObservables("Observable的传递")
 
+//connectable_publishBasicUsage("Connectable-publish-同一个发布者")
 
-
+connectable_multicastBasicUsage("Connectable-mastcast-超级管理员")
 
 
 
