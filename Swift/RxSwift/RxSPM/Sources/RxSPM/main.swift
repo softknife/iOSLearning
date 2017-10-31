@@ -25,3 +25,18 @@ combineObservablesBasicUsage("合并多个Observables")
 
 combineEventsBasicUsage("事件合并")
 
+combine_translateBetweenObservables("Observable的传递")
+
+
+
+
+
+
+
+
+
+func example(of:String,demo: @convention(block)()->()) {
+    
+    print(of)
+    demo()
+}
