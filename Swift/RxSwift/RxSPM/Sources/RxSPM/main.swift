@@ -1,4 +1,5 @@
 
+import Foundation
 
 observableBasicUsage("直接传入序列,并对其进行操作,Rx内部自动通知到订阅者")
 
@@ -29,7 +30,19 @@ combine_translateBetweenObservables("Observable的传递")
 
 //connectable_publishBasicUsage("Connectable-publish-同一个发布者")
 
-connectable_multicastBasicUsage("Connectable-mastcast-超级管理员")
+//connectable_multicastBasicUsage("Connectable-mastcast-超级管理员")
+
+//connectable_replayBasicUsage("Connectable-replay回放事件")
+
+constaintEventsCountInTimeSpan("事件回放-限制时间范围和个数-buffer")
+
+
+
+
+
+
+
+
 
 
 
@@ -41,3 +54,23 @@ func example(of:String,demo: @convention(block)()->()) {
     print(of)
     demo()
 }
+
+
+func stamp() -> String {
+    
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH:mm:ss"
+    let result = formatter.string(from: date)
+    return result
+    
+    
+}
+
+func delay(_ second: Int , closure: @escaping @convention(block) ()->())  {
+ 
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + TimeInterval(second), execute: closure)
+    
+}
+
+
