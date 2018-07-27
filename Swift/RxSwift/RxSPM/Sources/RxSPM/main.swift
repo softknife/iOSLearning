@@ -34,7 +34,7 @@ combine_translateBetweenObservables("Observable的传递")
 
 //connectable_replayBasicUsage("Connectable-replay回放事件")
 
-constaintEventsCountInTimeSpan("事件回放-限制时间范围和个数-buffer")
+//constaintEventsCountInTimeSpan("事件回放-限制时间范围和个数-buffer")
 
 
 
