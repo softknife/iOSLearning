@@ -49,7 +49,6 @@ struct FlashTool {
         guard device.hasFlash && device.hasTorch else{return}
         
         // 调整状态前必须锁定状态
-        
         try? device.lockForConfiguration()
         
         if device.flashMode == .off {
@@ -78,7 +77,6 @@ struct FlashTool {
         
     }
 }
-
 
 
 /*
