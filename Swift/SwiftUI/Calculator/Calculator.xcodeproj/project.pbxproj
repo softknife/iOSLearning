@@ -18,6 +18,7 @@
 		009C082C23852562008EECF2 /* 3.LayoutAndStackLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C082B23852562008EECF2 /* 3.LayoutAndStackLayoutView.swift */; };
 		009C082E238528DE008EECF2 /* 4.CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C082D238528DE008EECF2 /* 4.CalculatorButtonItem.swift */; };
 		009C083023852AE4008EECF2 /* 4.CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C082F23852AE4008EECF2 /* 4.CalculatorView.swift */; };
+		009C0832238632EF008EECF2 /* 5.AnotherCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C0831238632EF008EECF2 /* 5.AnotherCalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		009C082B23852562008EECF2 /* 3.LayoutAndStackLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.LayoutAndStackLayoutView.swift; sourceTree = "<group>"; };
 		009C082D238528DE008EECF2 /* 4.CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		009C082F23852AE4008EECF2 /* 4.CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.CalculatorView.swift; sourceTree = "<group>"; };
+		009C0831238632EF008EECF2 /* 5.AnotherCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.AnotherCalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				009C082B23852562008EECF2 /* 3.LayoutAndStackLayoutView.swift */,
 				009C082F23852AE4008EECF2 /* 4.CalculatorView.swift */,
 				009C082D238528DE008EECF2 /* 4.CalculatorButtonItem.swift */,
+				009C0831238632EF008EECF2 /* 5.AnotherCalculatorView.swift */,
 				009C0819238518F0008EECF2 /* Assets.xcassets */,
 				009C081E238518F0008EECF2 /* LaunchScreen.storyboard */,
 				009C0821238518F0008EECF2 /* Info.plist */,
@@ -168,6 +171,7 @@
 				009C083023852AE4008EECF2 /* 4.CalculatorView.swift in Sources */,
 				009C0818238518EF008EECF2 /* ContentView.swift in Sources */,
 				009C082A2385231F008EECF2 /* 2.ButtonCustomView.swift in Sources */,
+				009C0832238632EF008EECF2 /* 5.AnotherCalculatorView.swift in Sources */,
 				009C082823851DEB008EECF2 /* 1.ViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
